@@ -105,9 +105,12 @@ function updateStats() {
     });
   });
   
-  document.getElementById('statCategories').textContent = totalCategories;
-  document.getElementById('statTopics').textContent = totalTopics;
-  document.getElementById('statFiles').textContent = totalFiles;
+  const elCat = document.getElementById('statCategories');
+  const elTop = document.getElementById('statTopics');
+  const elFiles = document.getElementById('statFiles');
+  if (elCat) elCat.textContent = totalCategories;
+  if (elTop) elTop.textContent = totalTopics;
+  if (elFiles) elFiles.textContent = totalFiles;
 }
 
 // ==========================================================================
