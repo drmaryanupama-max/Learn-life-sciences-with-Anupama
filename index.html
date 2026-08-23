@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dr Palukurty Mary Anupama | Biochemistry & Biotechnology Academic Hub</title>
-  <meta name="description" content="Official academic repository of Dr Palukurty Mary Anupama: Curated lecture notes, reference textbooks, practical laboratory protocols, and research dissertations in Biochemistry and Biotechnology.">
-  <meta name="keywords" content="Dr Palukurty Mary Anupama, Dr Anupama Biochemistry, Biotechnology, Clinical Biochemistry, Immunology, Enzymology, Metabolism, AC Deb, Ph.D. Thesis">
-  <!-- Update href to your actual deployed domain (GitHub Pages or Cloudflare) -->
-  <link rel="canonical" href="https://dranupamabiochem.pages.dev/">
+  <meta name="description" content="Official academic repository of Dr Palukurty Mary Anupama: Curated lecture notes, reference textbooks, practical laboratory protocols, and 54 YouTube video lectures in Biochemistry and Biotechnology.">
+  <meta name="keywords" content="Dr Palukurty Mary Anupama, Dr Anupama Biochemistry, Biotechnology, Clinical Biochemistry, Immunology, Enzymology, Metabolism, AC Deb, Ph.D. Thesis, YouTube Lectures">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://drmaryanupama-max.github.io/Learn-life-sciences-with-Anupama/">
   
   <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,6 +36,7 @@
         <ul class="nav-links">
           <li><a href="#home" class="nav-link active">Home</a></li>
           <li><a href="#spotlight" class="nav-link">Textbooks & Research</a></li>
+          <li><a href="#youtube-lectures" class="nav-link"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> YouTube Lectures</a></li>
           <li><a href="#curriculum" class="nav-link">All Modules</a></li>
           <li><a href="#about" class="nav-link">About & Contact</a></li>
         </ul>
@@ -45,8 +46,8 @@
         <button id="themeToggle" class="btn-theme-toggle" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
           <i class="fa-solid fa-moon"></i>
         </button>
-        <a href="#curriculum" class="btn-primary">
-          <i class="fa-solid fa-graduation-cap"></i> Explore Notes
+        <a href="#youtube-lectures" class="btn-primary" style="background: #ef4444; border-color: #ef4444;">
+          <i class="fa-brands fa-youtube"></i> Watch Videos
         </a>
       </div>
     </div>
@@ -64,15 +65,15 @@
           </div>
           <h1 class="hero-title">Biochemistry & Biotechnology Knowledge Portal</h1>
           <p class="hero-subtitle">
-            Welcome! I am <strong>Dr Palukurty Mary Anupama</strong>. This portal provides curated lecture modules, digital textbooks, laboratory protocols, and research dissertations designed to support undergraduate and postgraduate students in Molecular Life Sciences and Medical Biochemistry.
+            Welcome! I am <strong>Dr Palukurty Mary Anupama</strong>. This portal provides curated lecture modules, digital textbooks, laboratory protocols, research dissertations, and <strong>54 full-length YouTube masterclasses</strong> designed for scholars in Molecular Life Sciences and Medical Biochemistry.
           </p>
           
           <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <a href="#curriculum" class="btn-primary" style="padding: 0.8rem 1.75rem; font-size: 1rem;">
-              <i class="fa-solid fa-book-open"></i> Browse Curriculum
+            <a href="#youtube-lectures" class="btn-primary" style="padding: 0.8rem 1.75rem; font-size: 1rem; background: #ef4444; border-color: #ef4444;">
+              <i class="fa-brands fa-youtube"></i> 54 YouTube Lectures
             </a>
-            <a href="#about" class="btn-outline" style="padding: 0.8rem 1.75rem; font-size: 1rem;">
-              <i class="fa-solid fa-user-doctor"></i> About Dr. Anupama
+            <a href="#curriculum" class="btn-outline" style="padding: 0.8rem 1.75rem; font-size: 1rem;">
+              <i class="fa-solid fa-book-open"></i> Browse Curriculum
             </a>
           </div>
 
@@ -82,12 +83,12 @@
               <div class="stat-label">Subject Modules</div>
             </div>
             <div class="stat-item">
-              <div class="stat-value" id="statTopics">70</div>
-              <div class="stat-label">Lectures & Chapters</div>
+              <div class="stat-value">54</div>
+              <div class="stat-label">YouTube Lectures</div>
             </div>
             <div class="stat-item">
-              <div class="stat-value" id="statFiles">50+</div>
-              <div class="stat-label">Downloadable Files</div>
+              <div class="stat-value" id="statTopics">70</div>
+              <div class="stat-label">Topics & Notes</div>
             </div>
             <div class="stat-item">
               <div class="stat-value">100%</div>
@@ -131,12 +132,53 @@
     </div>
   </section>
 
-  <!-- Search & Filter Bar Sticky Section -->
+  <!-- YouTube Video Lectures Section -->
+  <section id="youtube-lectures" class="videos-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="videos-header-badge">
+            <i class="fa-brands fa-youtube"></i> 54 Video Masterclasses
+          </div>
+          <h2 class="section-title">YouTube Lectures by Subject</h2>
+          <p class="section-subtitle">Organized video lessons with direct links to play on YouTube in a new tab.</p>
+        </div>
+      </div>
+
+      <!-- Video Filter Pills & Search -->
+      <div style="margin-bottom: 2rem;">
+        <div class="search-bar-wrapper" style="margin-bottom: 1.25rem;">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="videoSearchInput" class="search-input" placeholder="Search YouTube lectures (e.g. Urea cycle, Liver function, Enzyme kinetics, Antigens, Phenol)...">
+          <button id="clearVideoSearchBtn" class="clear-search-btn" title="Clear Search">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="category-pills" id="videoSectionPills">
+          <!-- Injected via app.js -->
+        </div>
+      </div>
+
+      <!-- Video Section Groups Grid -->
+      <div id="youtubeVideosContainer">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Search & Filter Bar Sticky Section for Curriculum -->
   <section class="search-section" id="curriculum">
     <div class="container">
+      <div class="section-header" style="margin-bottom: 1.5rem;">
+        <div>
+          <h2 class="section-title">Curriculum Notes & Study Materials</h2>
+          <p class="section-subtitle">Browse all 11 subject modules, lecture slides, and laboratory protocols.</p>
+        </div>
+      </div>
+
       <div class="search-bar-wrapper">
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <input type="text" id="searchInput" class="search-input" placeholder="Search by topic, document name, enzyme, pathway, or test (e.g. AC Deb, liver function, antibody, ethanol)...">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search study materials (e.g. AC Deb, liver function, antibody, ethanol, unit V)...">
         <button id="clearSearchBtn" class="clear-search-btn" title="Clear Search">
           <i class="fa-solid fa-xmark"></i>
         </button>
@@ -164,7 +206,7 @@
         <div class="profile-card">
           <div class="profile-header">
             <div class="avatar-wrapper">
-              <img src="dr_anupama.jpg" alt="Dr Palukurty Mary Anupama" class="avatar-img">
+              <img src="profile.jpg" alt="Dr Palukurty Mary Anupama" class="avatar-img">
             </div>
             <div>
               <h2 class="profile-name">Dr Palukurty Mary Anupama</h2>
@@ -223,7 +265,7 @@
             <li style="display: flex; gap: 0.85rem; align-items: flex-start;">
               <i class="fa-solid fa-circle-check" style="color: var(--primary); margin-top: 0.3rem;"></i>
               <div>
-                <strong>Food Quality & Standards:</strong> Regulatory compliance, HACCP, adulteration detection, and agro-food dynamics.
+                <strong>Environmental Science & Natural Resources:</strong> Ecosystem dynamics, ecological pyramids, water and forest conservation.
               </div>
             </li>
           </ul>
@@ -257,7 +299,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>© 2026 Dr Palukurty Mary Anupama. All educational materials are preserved for academic study and research purposes.</p>
+      <p>© 2026 Dr Palukurty Mary Anupama. All educational materials and YouTube lectures are preserved for academic study and research purposes.</p>
       <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--text-subtle);">
         Preserved & Modernized Academic Repository • Ready for Git & Web Deployment.
       </p>
