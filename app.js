@@ -207,14 +207,9 @@ function renderSpotlight() {
       </div>
       <div class="spotlight-footer">
         <span class="file-meta-pill"><i class="fa-solid fa-file"></i> ${item.size} (${item.type})</span>
-        <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
-          <button onclick="openFile('${item.file}', '${item.filename}')" class="btn-primary" style="padding: 0.45rem 1rem; font-size: 0.82rem; cursor:pointer; border:none;">
-            <i class="fa-solid fa-eye"></i> View
-          </button>
-          <a href="${item.file}" download="${item.filename}" class="btn-outline" style="padding: 0.45rem 1rem; font-size: 0.82rem;">
-            <i class="fa-solid fa-download"></i> Download
-          </a>
-        </div>
+        <button onclick="openFile('${item.file}', '${item.filename}')" class="btn-primary" style="padding: 0.45rem 1rem; font-size: 0.82rem; cursor:pointer; border:none;">
+          <i class="fa-solid fa-eye"></i> View
+        </button>
       </div>
     </div>
   `).join('');
@@ -313,19 +308,14 @@ function renderCategories() {
                   ${topic.files.length > 0 ? topic.files.map(f => {
                     const extClass = `ext-${f.ext}`;
                     return `
-                      <div class="file-item-btn">
-                        <div class="file-btn-left" style="flex:1; min-width:0;" onclick="openFile('${f.rel_path}', '${f.filename}')" style="cursor:pointer;">
+                      <div class="file-item-btn" onclick="openFile('${f.rel_path}', '${f.filename}')" style="cursor:pointer;" title="Click to view">
+                        <div class="file-btn-left">
                           <span class="ext-badge ${extClass}">${f.ext}</span>
-                          <span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor:pointer;" title="Click to view">${f.filename}</span>
+                          <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${f.filename}</span>
                         </div>
-                        <div style="display:flex; gap:0.4rem; align-items:center; flex-shrink:0;">
-                          <button onclick="openFile('${f.rel_path}', '${f.filename}')" title="View in browser" style="background:var(--primary-light); color:var(--primary); border:none; border-radius:6px; padding:0.25rem 0.55rem; font-size:0.75rem; cursor:pointer; font-weight:600;">
-                            <i class="fa-solid fa-eye"></i>
-                          </button>
-                          <a href="${f.rel_path}" download="${f.filename}" title="Download file" style="background:var(--bg-surface); color:var(--text-muted); border:1px solid var(--border-subtle); border-radius:6px; padding:0.25rem 0.55rem; font-size:0.75rem; text-decoration:none; font-weight:600;">
-                            <i class="fa-solid fa-download"></i>
-                          </a>
-                        </div>
+                        <span style="font-size:0.75rem; color:var(--primary); font-weight:600; flex-shrink:0;">
+                          <i class="fa-solid fa-eye"></i> View
+                        </span>
                       </div>
                     `;
                   }).join('') : `
