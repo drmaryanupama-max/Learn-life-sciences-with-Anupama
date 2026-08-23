@@ -1,6 +1,6 @@
 /**
  * Dr. Palukurty Mary Anupama - Biochemistry & Biotechnology Academic Hub
- * Lightweight Multi-Page Controller (Zero Dependencies, Instant Load)
+ * Multi-Page Controller (Zero Dependencies, Verified Clean)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -47,7 +47,6 @@ function getViewerUrl(relPath) {
   if (ext === 'pdf') {
     return relPath; // browser opens PDFs natively in new tab
   }
-  // Build public URL for Microsoft Office Online viewer
   const base = window.location.href.replace(/\/[^/]*$/, '');
   const absUrl = encodeURIComponent(base + '/' + relPath);
   return `https://view.officeapps.live.com/op/view.aspx?src=${absUrl}`;
@@ -139,9 +138,10 @@ function initCurriculumFilters() {
   const clearBtn = document.getElementById('clearSearchBtn');
   const catCards = document.querySelectorAll('.category-card');
 
-  // Attach click listener to all category headers directly
+  // Attach click listener to all category headers
   document.querySelectorAll('.category-header').forEach(header => {
-    header.addEventListener('click', () => {
+    header.addEventListener('click', (e) => {
+      e.preventDefault();
       toggleCategory(header);
     });
   });
@@ -186,14 +186,10 @@ function initCurriculumFilters() {
       if (matchesCat && matchesQuery) {
         card.style.display = 'block';
         if (q || activeCat !== 'all') {
-          card.classList.add('active'); // auto-expand on specific filter or search
+          card.classList.add('active');
+          card.classList.add('expanded');
         }
       } else {
-        card.style.display = 'none';
-      }
-    });
-  }
-} else {
         card.style.display = 'none';
       }
     });
