@@ -1,0 +1,1016 @@
+[
+  {
+    "name": "Clinical Biochemistry",
+    "raw_category": "Clinical Biochemistry",
+    "icon": "fa-flask-vial",
+    "badge": "Clinical & Diagnostic",
+    "description": "Comprehensive diagnostics, organ function tests (Liver, Kidney, Gastric), automated biochemistry analyzers, and AC Deb reference materials.",
+    "order": 1,
+    "topics": [
+      {
+        "title": "Clinical Biochemistry",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/clinical-biochemistry",
+        "files": []
+      },
+      {
+        "title": "Text Book for Biochemistry -AC Deb",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/clinical-biochemistry/text-book-for-biochemistry-ac-deb",
+        "files": [
+          {
+            "filename": "fundamentals of bochemistry by AC Deb.pdf",
+            "rel_path": "materials/Clinical%20Biochemistry/fundamentals%20of%20bochemistry%20by%20AC%20Deb.pdf",
+            "size_bytes": 22468756,
+            "size_display": "21.4 MB",
+            "ext": "pdf",
+            "drive_id": "1W7VysaHVbER03bz7h6Aed_MyvALYZ9RB"
+          }
+        ]
+      },
+      {
+        "title": "Scope of Clinical Biochemistry",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/clinical-biochemistry/scope-of-clinical-biochemistry",
+        "files": [
+          {
+            "filename": "Introduction to clinical Biochemistry.pdf",
+            "rel_path": "materials/Clinical%20Biochemistry/Introduction%20to%20clinical%20Biochemistry.pdf",
+            "size_bytes": 250836,
+            "size_display": "245 KB",
+            "ext": "pdf",
+            "drive_id": "1rTa980bDXOG0aHpvU5DA5S70FmZp9M-L"
+          }
+        ]
+      },
+      {
+        "title": "Automation in clinical Biochemistry",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/clinical-biochemistry/automation-in-clinical-biochemistry",
+        "files": [
+          {
+            "filename": "Automation of clinical biochemistry.pdf",
+            "rel_path": "materials/Clinical%20Biochemistry/Automation%20of%20clinical%20biochemistry.pdf",
+            "size_bytes": 1765063,
+            "size_display": "1.7 MB",
+            "ext": "pdf",
+            "drive_id": "1Hw0XRlkDnel31S5S_gUvbhNyxNqiLy1G"
+          }
+        ]
+      },
+      {
+        "title": "Body fluids, their collection and composition",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/clinical-biochemistry/body-fluids-their-collection-and-composition",
+        "files": [
+          {
+            "filename": "Sample collection for website-converted.pdf",
+            "rel_path": "materials/Clinical%20Biochemistry/Sample%20collection%20for%20website-converted.pdf",
+            "size_bytes": 320383,
+            "size_display": "313 KB",
+            "ext": "pdf",
+            "drive_id": "1v9aw-heHXM-TfnUfOrXcuKsyDNVMU89F"
+          },
+          {
+            "filename": "test for csf.pdf",
+            "rel_path": "materials/Clinical%20Biochemistry/test%20for%20csf.pdf",
+            "size_bytes": 329139,
+            "size_display": "321 KB",
+            "ext": "pdf",
+            "drive_id": "1n-Okf80MXpYuciSgSVmeEwJUpi5tScn7"
+          },
+          {
+            "filename": "Normal lab values of blood , csf and urine.pdf",
+            "rel_path": "materials/Clinical%20Biochemistry/Normal%20lab%20values%20of%20blood%20%2C%20csf%20and%20urine.pdf",
+            "size_bytes": 44690,
+            "size_display": "44 KB",
+            "ext": "pdf",
+            "drive_id": "1XFEBod6O-GfNCfNupaz1RU3YV-0DJgRb"
+          }
+        ]
+      },
+      {
+        "title": "Clinical Enzymology",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/clinical-biochemistry/clinical-enzymology",
+        "files": [
+          {
+            "filename": "isoenzymes part 1.pdf",
+            "rel_path": "materials/Clinical%20Biochemistry/isoenzymes%20part%201.pdf",
+            "size_bytes": 186629,
+            "size_display": "182 KB",
+            "ext": "pdf",
+            "drive_id": "1rv7GLIDcR-OK3WWdCKwkN653S19WMZ5X"
+          },
+          {
+            "filename": "functional and non functional pasma enzymes.pdf",
+            "rel_path": "materials/Clinical%20Biochemistry/functional%20and%20non%20functional%20pasma%20enzymes.pdf",
+            "size_bytes": 62878,
+            "size_display": "61 KB",
+            "ext": "pdf",
+            "drive_id": "1gsX2xpExpLhbqnUacAlWteAi2ddpVHA4"
+          }
+        ]
+      },
+      {
+        "title": "Gastric function tests",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/clinical-biochemistry/gastric-function-tests",
+        "files": [
+          {
+            "filename": "Gastric Function _ Gastric Function Test _ Gastric Secretion.pdf",
+            "rel_path": "materials/Clinical%20Biochemistry/Gastric%20Function%20_%20Gastric%20Function%20Test%20_%20Gastric%20Secretion.pdf",
+            "size_bytes": 1182597,
+            "size_display": "1.1 MB",
+            "ext": "pdf",
+            "drive_id": "1O1hmE3uGjBCgAtZhF65zXNaxeBqlN6Ut"
+          }
+        ]
+      },
+      {
+        "title": "Liver function tests",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/clinical-biochemistry/liver-function-tests",
+        "files": [
+          {
+            "filename": "liver function tests nios.docx",
+            "rel_path": "materials/Clinical%20Biochemistry/liver%20function%20tests%20nios.docx",
+            "size_bytes": 131006,
+            "size_display": "128 KB",
+            "ext": "docx",
+            "drive_id": "1K-gAvuuWlufbYt4P56__2yC7HmoxbrEY"
+          },
+          {
+            "filename": "liver function tests.docx",
+            "rel_path": "materials/Clinical%20Biochemistry/liver%20function%20tests.docx",
+            "size_bytes": 32970,
+            "size_display": "32 KB",
+            "ext": "docx",
+            "drive_id": "1usYjwDQJmSlpCtldo93A6PcKqG76K8m8"
+          }
+        ]
+      },
+      {
+        "title": "Kidney function tests",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/clinical-biochemistry/kidney-function-tests",
+        "files": [
+          {
+            "filename": "kidney function tests.pdf",
+            "rel_path": "materials/Clinical%20Biochemistry/kidney%20function%20tests.pdf",
+            "size_bytes": 431247,
+            "size_display": "421 KB",
+            "ext": "pdf",
+            "drive_id": "19dXP7nM_3wmxRqfr0r0piDeI9KAXgJB-"
+          },
+          {
+            "filename": "kidney function test from deb.pdf",
+            "rel_path": "materials/Clinical%20Biochemistry/kidney%20function%20test%20from%20deb.pdf",
+            "size_bytes": 51315,
+            "size_display": "50 KB",
+            "ext": "pdf",
+            "drive_id": "11VyzEtZnJrSq1N8ifRMHvr1FGhtJ_6Fz"
+          }
+        ]
+      },
+      {
+        "title": "Disorders related to metabolism",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/clinical-biochemistry/disorders-related-to-metabolism",
+        "files": [
+          {
+            "filename": "unit V.docx",
+            "rel_path": "materials/Clinical%20Biochemistry/unit%20V.docx",
+            "size_bytes": 416265,
+            "size_display": "407 KB",
+            "ext": "docx",
+            "drive_id": "1T6lKJ1bIlYz4KJRlq4h1pAou4kmRYBd1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Immunology Content",
+    "raw_category": "Immunology Content",
+    "icon": "fa-shield-virus",
+    "badge": "Immunology",
+    "description": "Core concepts of innate & adaptive immunity, antigen-antibody interactions, antibody diversity genetics, MHC, hypersensitivity, vaccines, and hybridoma technology.",
+    "order": 2,
+    "topics": [
+      {
+        "title": "Immunology content",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content",
+        "files": []
+      },
+      {
+        "title": "Introduction to Immunity",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/introduction-to-immunity",
+        "files": []
+      },
+      {
+        "title": "Antigens",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/antigens",
+        "files": [
+          {
+            "filename": "ANITGENS.pdf",
+            "rel_path": "materials/Immunology%20Content/ANITGENS.pdf",
+            "size_bytes": 246274,
+            "size_display": "241 KB",
+            "ext": "pdf",
+            "drive_id": "1ncQFjrYJLVlG1vCLIkZAKC379p6oywlw"
+          }
+        ]
+      },
+      {
+        "title": "Antibodies",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/antibodies",
+        "files": []
+      },
+      {
+        "title": "Immune response",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/immune-response",
+        "files": [
+          {
+            "filename": "IMMUNE RESPONSE.doc",
+            "rel_path": "materials/Immunology%20Content/IMMUNE%20RESPONSE.doc",
+            "size_bytes": 195584,
+            "size_display": "191 KB",
+            "ext": "doc",
+            "drive_id": "1aQs80rFdvo8Q_IlMU9INyHmQx_N5Dzux"
+          }
+        ]
+      },
+      {
+        "title": "Antigen - Antibody reactions",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/antigen-antibody-reactions",
+        "files": [
+          {
+            "filename": "ANTIGEN-ANTIBODY REACTIONS.pdf",
+            "rel_path": "materials/Immunology%20Content/ANTIGEN-ANTIBODY%20REACTIONS.pdf",
+            "size_bytes": 2369946,
+            "size_display": "2.3 MB",
+            "ext": "pdf",
+            "drive_id": "1XbhnCrGR-GGWPsHe7vl5O1PDH0z99OvJ"
+          }
+        ]
+      },
+      {
+        "title": "Gentic basis for Antibody diversity",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/gentic-basis-for-antibody-diversity",
+        "files": [
+          {
+            "filename": "GENETIC CONTROL for anitbody diversity.pdf",
+            "rel_path": "materials/Immunology%20Content/GENETIC%20CONTROL%20for%20anitbody%20diversity.pdf",
+            "size_bytes": 309761,
+            "size_display": "303 KB",
+            "ext": "pdf",
+            "drive_id": "1zblh_BSYoejoUZpLNPhB-jclqWeuiFy7"
+          }
+        ]
+      },
+      {
+        "title": "Immune cells",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/immune-cells",
+        "files": []
+      },
+      {
+        "title": "Lymphoid organs",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/lymphoid-organs",
+        "files": [
+          {
+            "filename": "LYMPHOID ORGANS.doc",
+            "rel_path": "materials/Immunology%20Content/LYMPHOID%20ORGANS.doc",
+            "size_bytes": 531968,
+            "size_display": "520 KB",
+            "ext": "doc",
+            "drive_id": "1SkhhgVqEO4Ovo69arsBRrZWNC7DBIkm5"
+          }
+        ]
+      },
+      {
+        "title": "MHC",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/mhc",
+        "files": [
+          {
+            "filename": "MHC.doc",
+            "rel_path": "materials/Immunology%20Content/MHC.doc",
+            "size_bytes": 149504,
+            "size_display": "146 KB",
+            "ext": "doc",
+            "drive_id": "1SPyZcE-hYlJXXWeF4Cle5cBTHwkAkYDC"
+          }
+        ]
+      },
+      {
+        "title": "Hypersensitivity reactions",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/hypersensitivity-reactions",
+        "files": [
+          {
+            "filename": "Hypersensitivity.pdf",
+            "rel_path": "materials/Immunology%20Content/Hypersensitivity.pdf",
+            "size_bytes": 555937,
+            "size_display": "543 KB",
+            "ext": "pdf",
+            "drive_id": "1Fsz8Y4WIad36e-rg5fRuqTGl2myk3LeF"
+          }
+        ]
+      },
+      {
+        "title": "Transplantation Immunology",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/transplantation-immunology",
+        "files": [
+          {
+            "filename": "transplantation immunology.pptx",
+            "rel_path": "materials/Immunology%20Content/transplantation%20immunology.pptx",
+            "size_bytes": 2586021,
+            "size_display": "2.5 MB",
+            "ext": "pptx",
+            "drive_id": "13Wb6MP4Uv1MuvOeb-mGkyfb4lnCdFDCs"
+          },
+          {
+            "filename": "TRANSPLANTATION.pdf",
+            "rel_path": "materials/Immunology%20Content/TRANSPLANTATION.pdf",
+            "size_bytes": 340658,
+            "size_display": "333 KB",
+            "ext": "pdf",
+            "drive_id": "1Neq3Q6APyBaj-JL__1yRSZ6FXXfaHlCh"
+          }
+        ]
+      },
+      {
+        "title": "Tumor Immunology",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/tumor-immunology",
+        "files": [
+          {
+            "filename": "TUMOR IMMUNOLOGY.pdf",
+            "rel_path": "materials/Immunology%20Content/TUMOR%20IMMUNOLOGY.pdf",
+            "size_bytes": 447437,
+            "size_display": "437 KB",
+            "ext": "pdf",
+            "drive_id": "1QRt3fCtyPMIcJ8s_dGIpS9AyVIXz-w-R"
+          }
+        ]
+      },
+      {
+        "title": "Vaccines",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/vaccines",
+        "files": [
+          {
+            "filename": "vaccines.pdf",
+            "rel_path": "materials/Immunology%20Content/vaccines.pdf",
+            "size_bytes": 126819,
+            "size_display": "124 KB",
+            "ext": "pdf",
+            "drive_id": "1KHjkKcYtV9Y4ZxBG0BtPVIsV0Yv5QqyX"
+          }
+        ]
+      },
+      {
+        "title": "Hybridoma Technology",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/hybridoma-technology",
+        "files": [
+          {
+            "filename": "HYBRIDOMA-converted.pdf",
+            "rel_path": "materials/Immunology%20Content/HYBRIDOMA-converted.pdf",
+            "size_bytes": 187837,
+            "size_display": "183 KB",
+            "ext": "pdf",
+            "drive_id": "1VIPHh47W3PolaSZxpYbmcClPci3Fq5iK"
+          }
+        ]
+      },
+      {
+        "title": "Introduction to Immunology",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/introduction-to-immunology_1",
+        "files": []
+      },
+      {
+        "title": "Introduction to Immunology",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/introduction-to-immunology",
+        "files": []
+      },
+      {
+        "title": "Immunity",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/immunology-content/immunity",
+        "files": []
+      }
+    ]
+  },
+  {
+    "name": "Intermediary Metabolism",
+    "raw_category": "Intermediary Metabolism",
+    "icon": "fa-dna",
+    "badge": "Metabolism & Nutrition",
+    "description": "Detailed biochemical pathways covering amino acid metabolism, vitamins, essential minerals, nutritional biochemistry, and nucleotide dynamics.",
+    "order": 3,
+    "topics": [
+      {
+        "title": "Intermediary metabolism",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/intermediary-metabolism",
+        "files": []
+      },
+      {
+        "title": "Porphyrin metabolism",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/intermediary-metabolism/porphyrin-metabolism",
+        "files": []
+      },
+      {
+        "title": "vitamins",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/intermediary-metabolism/vitamins",
+        "files": [
+          {
+            "filename": "vitamins.pdf",
+            "rel_path": "materials/Intermediary%20Metabolism/vitamins.pdf",
+            "size_bytes": 151076,
+            "size_display": "148 KB",
+            "ext": "pdf",
+            "drive_id": "1wRxyo_L_U1e-yyoBLgor9JdKe8Ole7el"
+          }
+        ]
+      },
+      {
+        "title": "Nutritional Biochemistry",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/intermediary-metabolism/nutritional-biochemistry",
+        "files": [
+          {
+            "filename": "nutritional biochemistry.pdf",
+            "rel_path": "materials/Intermediary%20Metabolism/nutritional%20biochemistry.pdf",
+            "size_bytes": 554508,
+            "size_display": "542 KB",
+            "ext": "pdf",
+            "drive_id": "1w4t-93NbELeC1b4EU599K2ap27vX0UX9"
+          }
+        ]
+      },
+      {
+        "title": "Minerals",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/intermediary-metabolism/minerals",
+        "files": [
+          {
+            "filename": "minerals.pdf",
+            "rel_path": "materials/Intermediary%20Metabolism/minerals.pdf",
+            "size_bytes": 151368,
+            "size_display": "148 KB",
+            "ext": "pdf",
+            "drive_id": "1kjF5T9HMjiyKzDA0iI-LblconZ1o4Tg9"
+          }
+        ]
+      },
+      {
+        "title": "Amino acid metabolism",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/intermediary-metabolism/amino-acid-metabolism",
+        "files": []
+      },
+      {
+        "title": "Nucleotide metabolism",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/intermediary-metabolism/nucleotide-metabolism",
+        "files": []
+      }
+    ]
+  },
+  {
+    "name": "Enzymology",
+    "raw_category": "Enzymology",
+    "icon": "fa-atom",
+    "badge": "Biocatalysis",
+    "description": "Enzyme kinetics, isolation, purification methodologies, industrial immobilization techniques, and foundational principles.",
+    "order": 4,
+    "topics": [
+      {
+        "title": "Enzymology",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/enzymology",
+        "files": []
+      },
+      {
+        "title": "Isolaiton and purification of Enzymes",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/enzymology/isolaiton-and-purification-of-enzymes",
+        "files": [
+          {
+            "filename": "Enzyme isolation and Purification.pdf",
+            "rel_path": "materials/Enzymology/Enzyme%20isolation%20and%20Purification.pdf",
+            "size_bytes": 362645,
+            "size_display": "354 KB",
+            "ext": "pdf",
+            "drive_id": "1vFSgaPYbZ8EeZKxOK14N8-AEeWd9UhQf"
+          },
+          {
+            "filename": "unit 4 material.pdf",
+            "rel_path": "materials/Enzymology/unit%204%20material.pdf",
+            "size_bytes": 8125121,
+            "size_display": "7.7 MB",
+            "ext": "pdf",
+            "drive_id": "1KAYwCUbhf1jYTLlIciy5CA9lcnqqmeXH"
+          }
+        ]
+      },
+      {
+        "title": "Immobilization of enzymes",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/enzymology/immobilization-of-enzymes",
+        "files": []
+      },
+      {
+        "title": "Material fo Enzyme isolation and purification from text book",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/enzymology/material-fo-enzyme-isolation-and-purification-from-text-book",
+        "files": []
+      },
+      {
+        "title": "Introduction to enzymology",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/enzymology/introduction-to-enzymology",
+        "files": []
+      }
+    ]
+  },
+  {
+    "name": "Cell Biology",
+    "raw_category": "Cell Biology",
+    "icon": "fa-microscope",
+    "badge": "Cellular Science",
+    "description": "Cellular architecture, cell cycle regulation, signal transduction pathways, cell-cell communication, advanced microscopy, and complete book draft.",
+    "order": 5,
+    "topics": [
+      {
+        "title": "Cell Biology",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/cell-biology",
+        "files": []
+      },
+      {
+        "title": "Cell structure",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/cell-biology/cell-structure",
+        "files": [
+          {
+            "filename": "Cell structure Introduction.pdf",
+            "rel_path": "materials/Cell%20Biology/Cell%20structure%20Introduction.pdf",
+            "size_bytes": 245943,
+            "size_display": "240 KB",
+            "ext": "pdf",
+            "drive_id": "1zDXdhOIW3Nb2bHTtAVvfEEORW9ulwcrp"
+          }
+        ]
+      },
+      {
+        "title": "Cell Cycle and its regulation",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/cell-biology/cell-cycle-and-its-regulation",
+        "files": [
+          {
+            "filename": "cell cycle and its regulation.pdf",
+            "rel_path": "materials/Cell%20Biology/cell%20cycle%20and%20its%20regulation.pdf",
+            "size_bytes": 1126756,
+            "size_display": "1.1 MB",
+            "ext": "pdf",
+            "drive_id": "1GB_lmxkCfCx8DPgFN5Vd1MviNm7okvea"
+          }
+        ]
+      },
+      {
+        "title": "Cell signalling",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/cell-biology/cell-signalling",
+        "files": [
+          {
+            "filename": "cell signaling.pdf",
+            "rel_path": "materials/Cell%20Biology/cell%20signaling.pdf",
+            "size_bytes": 1561213,
+            "size_display": "1.5 MB",
+            "ext": "pdf",
+            "drive_id": "1LbKN7nv1ZfhxTHo8Ew6EmvSNH3VrQNXl"
+          }
+        ]
+      },
+      {
+        "title": "Cell - cell communication",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/cell-biology/cell-cell-communication",
+        "files": [
+          {
+            "filename": "Cell-cell communication final.pdf",
+            "rel_path": "materials/Cell%20Biology/Cell-cell%20communication%20final.pdf",
+            "size_bytes": 4018775,
+            "size_display": "3.8 MB",
+            "ext": "pdf",
+            "drive_id": "1f4YZ1Aeq3qt6vFu8EA6J8tyU20Nn9wUD"
+          }
+        ]
+      },
+      {
+        "title": "Techniques in cell biology",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/cell-biology/techniques-in-cell-biology",
+        "files": [
+          {
+            "filename": "Techniques in cell biology.pdf",
+            "rel_path": "materials/Cell%20Biology/Techniques%20in%20cell%20biology.pdf",
+            "size_bytes": 681326,
+            "size_display": "665 KB",
+            "ext": "pdf",
+            "drive_id": "1Bqbrvy6JQnuNQ8PZWg5FOPe-U1-X43w4"
+          }
+        ]
+      },
+      {
+        "title": "Draft of cell biology book",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/cell-biology/draft-of-cell-biology-book",
+        "files": [
+          {
+            "filename": "Cell Biology book.pdf",
+            "rel_path": "materials/Cell%20Biology/Cell%20Biology%20book.pdf",
+            "size_bytes": 11745335,
+            "size_display": "11.2 MB",
+            "ext": "pdf",
+            "drive_id": "1iypab2llkOD-kbxNJNR4andyWucdNvXo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Food Safety & Quality Management",
+    "raw_category": "Food Safety And Quality Management",
+    "icon": "fa-wheat-awn",
+    "badge": "Food Tech & Quality",
+    "description": "Food safety hazards management, international food standards, adulteration acts (Units I-IV), agri-food dynamics, and quality assurance.",
+    "order": 6,
+    "topics": [
+      {
+        "title": "Food safety and quality management",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/food-safety-and-quality-management",
+        "files": [
+          {
+            "filename": "food hazards in detail.pdf",
+            "rel_path": "materials/Food%20Safety%20And%20Quality%20Management/food%20hazards%20in%20detail.pdf",
+            "size_bytes": 615719,
+            "size_display": "601 KB",
+            "ext": "pdf",
+            "drive_id": "10OFNnHFrnfYpdvF0shk4f0ePlelSJDDu"
+          },
+          {
+            "filename": "Management of hazards in food.pptx",
+            "rel_path": "materials/Food%20Safety%20And%20Quality%20Management/Management%20of%20hazards%20in%20food.pptx",
+            "size_bytes": 9886326,
+            "size_display": "9.4 MB",
+            "ext": "pptx",
+            "drive_id": "1BvStw-ONUrdx9-e75Evn42z_YcFZIuZI"
+          },
+          {
+            "filename": "management of food hazards notes.pdf",
+            "rel_path": "materials/Food%20Safety%20And%20Quality%20Management/management%20of%20food%20hazards%20notes.pdf",
+            "size_bytes": 738204,
+            "size_display": "721 KB",
+            "ext": "pdf",
+            "drive_id": "1BfTxdfZ_ZFcqeA7IVjfbEHcj_bmC_yCv"
+          },
+          {
+            "filename": "Food laws and Food standards.pdf",
+            "rel_path": "materials/Food%20Safety%20And%20Quality%20Management/Food%20laws%20and%20Food%20standards.pdf",
+            "size_bytes": 401829,
+            "size_display": "392 KB",
+            "ext": "pdf",
+            "drive_id": "1r9ZyJL-aQ69iU5Zr1dWUuZtWfI5UeqNm"
+          }
+        ]
+      },
+      {
+        "title": "Introduction to Food safety",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/food-safety-and-quality-management/introduction-to-food-safety",
+        "files": [
+          {
+            "filename": "Food Safety Hazards introduction.docx",
+            "rel_path": "materials/Food%20Safety%20And%20Quality%20Management/Food%20Safety%20Hazards%20introduction.docx",
+            "size_bytes": 32213,
+            "size_display": "31 KB",
+            "ext": "docx",
+            "drive_id": "1VndXV3BxE854Tx-zOFRltqV6LPGnIv1w"
+          },
+          {
+            "filename": "food hazards part 2.docx",
+            "rel_path": "materials/Food%20Safety%20And%20Quality%20Management/food%20hazards%20part%202.docx",
+            "size_bytes": 607973,
+            "size_display": "594 KB",
+            "ext": "docx",
+            "drive_id": "1KN8WNhqsRybjZ2I6J6SjVe5bxnc7Ga4u"
+          }
+        ]
+      },
+      {
+        "title": "Management of Food Hazards",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/food-safety-and-quality-management/management-of-food-hazards",
+        "files": [
+          {
+            "filename": "management of food hazards notes.pdf",
+            "rel_path": "materials/Food%20Safety%20And%20Quality%20Management/management%20of%20food%20hazards%20notes.pdf",
+            "size_bytes": 738204,
+            "size_display": "721 KB",
+            "ext": "pdf",
+            "drive_id": "1BfTxdfZ_ZFcqeA7IVjfbEHcj_bmC_yCv"
+          }
+        ]
+      },
+      {
+        "title": "Food laws, Food Standards and Recent concerns",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/food-safety-and-quality-management/food-laws-food-standards-and-recent-concerns",
+        "files": [
+          {
+            "filename": "Food laws and Food standards.pdf",
+            "rel_path": "materials/Food%20Safety%20And%20Quality%20Management/Food%20laws%20and%20Food%20standards.pdf",
+            "size_bytes": 401829,
+            "size_display": "392 KB",
+            "ext": "pdf",
+            "drive_id": "1r9ZyJL-aQ69iU5Zr1dWUuZtWfI5UeqNm"
+          },
+          {
+            "filename": "Food adulteration acts part II.pptx",
+            "rel_path": "materials/Food%20Safety%20And%20Quality%20Management/Food%20adulteration%20acts%20part%20II.pptx",
+            "size_bytes": 276393,
+            "size_display": "270 KB",
+            "ext": "pptx",
+            "drive_id": "1vQPGwxG1qncAYltYoDkgZ4TnqvqSFuhi"
+          },
+          {
+            "filename": "Food adultration unit part IV.pptx",
+            "rel_path": "materials/Food%20Safety%20And%20Quality%20Management/Food%20adultration%20unit%20part%20IV.pptx",
+            "size_bytes": 808647,
+            "size_display": "790 KB",
+            "ext": "pptx",
+            "drive_id": "1fzon15jc-yBvO0-fzEP5sw42unWwwVLA"
+          },
+          {
+            "filename": "Food adulteration acts part Iii.pptx",
+            "rel_path": "materials/Food%20Safety%20And%20Quality%20Management/Food%20adulteration%20acts%20part%20Iii.pptx",
+            "size_bytes": 897658,
+            "size_display": "877 KB",
+            "ext": "pptx",
+            "drive_id": "1XczIG3u7cMlhI9yPxUbu6ad23OSIvdBN"
+          },
+          {
+            "filename": "Food adulteration acts unit III part I.pptx",
+            "rel_path": "materials/Food%20Safety%20And%20Quality%20Management/Food%20adulteration%20acts%20unit%20III%20part%20I.pptx",
+            "size_bytes": 1587161,
+            "size_display": "1.5 MB",
+            "ext": "pptx",
+            "drive_id": "1duECb8FnSqxbuVZj4d28yvtmTr6-C1VF"
+          }
+        ]
+      },
+      {
+        "title": "Food Quality",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/food-safety-and-quality-management/food-quality",
+        "files": [
+          {
+            "filename": "agri food system dynamics.docx",
+            "rel_path": "materials/Food%20Safety%20And%20Quality%20Management/agri%20food%20system%20dynamics.docx",
+            "size_bytes": 15234,
+            "size_display": "15 KB",
+            "ext": "docx",
+            "drive_id": "1fFQSOrv9JEEThEOc2tT51fEwOuI3i1Tj"
+          },
+          {
+            "filename": "Food quality management.pdf",
+            "rel_path": "materials/Food%20Safety%20And%20Quality%20Management/Food%20quality%20management.pdf",
+            "size_bytes": 346375,
+            "size_display": "338 KB",
+            "ext": "pdf",
+            "drive_id": "1tmMtKn9qilh2QvCq73YRzB6jYxshl5kg"
+          },
+          {
+            "filename": "unit 4 part 2 material.pdf",
+            "rel_path": "materials/Food%20Safety%20And%20Quality%20Management/unit%204%20part%202%20material.pdf",
+            "size_bytes": 184730,
+            "size_display": "180 KB",
+            "ext": "pdf",
+            "drive_id": "1qtwIHGEdysWAEC_pbFAml7jvepcsl7Qw"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ph.D. Thesis (Bioethanol Production)",
+    "raw_category": "My Ph D Thesis Optimization And Production Of Ethanol",
+    "icon": "fa-graduation-cap",
+    "badge": "Doctoral Research",
+    "description": "Original Ph.D. dissertation on the optimization and bioethanol production by Dr. Anupama: complete chapters from Literature Review to Results & References.",
+    "order": 7,
+    "topics": [
+      {
+        "title": "My Ph.D Thesis- Optimization and production of Ethanol",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/my-ph-d-thesis-optimization-and-production-of-ethanol",
+        "files": []
+      },
+      {
+        "title": "Title pages and Index",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/my-ph-d-thesis-optimization-and-production-of-ethanol/title-pages-and-index",
+        "files": [
+          {
+            "filename": "start pages with front pge and index.docx",
+            "rel_path": "materials/My%20Ph%20D%20Thesis%20Optimization%20And%20Production%20Of%20Ethanol/start%20pages%20with%20front%20pge%20and%20index.docx",
+            "size_bytes": 10028751,
+            "size_display": "9.6 MB",
+            "ext": "docx",
+            "drive_id": "1yEqXMGWlMOz124f6BilvxpPQnD-dTARZ"
+          }
+        ]
+      },
+      {
+        "title": "Introduction",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/my-ph-d-thesis-optimization-and-production-of-ethanol/introduction",
+        "files": [
+          {
+            "filename": "introduction.docx",
+            "rel_path": "materials/My%20Ph%20D%20Thesis%20Optimization%20And%20Production%20Of%20Ethanol/introduction.docx",
+            "size_bytes": 1421979,
+            "size_display": "1.4 MB",
+            "ext": "docx",
+            "drive_id": "1aIwSzmGGmUIiksLs4fLArXBpgX8HCu55"
+          }
+        ]
+      },
+      {
+        "title": "Literature Review",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/my-ph-d-thesis-optimization-and-production-of-ethanol/literature-review",
+        "files": [
+          {
+            "filename": "literature review.docx",
+            "rel_path": "materials/My%20Ph%20D%20Thesis%20Optimization%20And%20Production%20Of%20Ethanol/literature%20review.docx",
+            "size_bytes": 14731658,
+            "size_display": "14.0 MB",
+            "ext": "docx",
+            "drive_id": "1QFQPw4TZRkCRK-s9k6m4Q1UTH-00C9B0"
+          }
+        ]
+      },
+      {
+        "title": "Materials and Methods",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/my-ph-d-thesis-optimization-and-production-of-ethanol/materials-and-methods",
+        "files": [
+          {
+            "filename": "materials and methods.docx",
+            "rel_path": "materials/My%20Ph%20D%20Thesis%20Optimization%20And%20Production%20Of%20Ethanol/materials%20and%20methods.docx",
+            "size_bytes": 1756068,
+            "size_display": "1.7 MB",
+            "ext": "docx",
+            "drive_id": "185rKn6m0TKvq3rz4VSaSngqLRj3fsvsx"
+          }
+        ]
+      },
+      {
+        "title": "Results and Discussion",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/my-ph-d-thesis-optimization-and-production-of-ethanol/results-and-discussion",
+        "files": [
+          {
+            "filename": "Results and discussion.docx",
+            "rel_path": "materials/My%20Ph%20D%20Thesis%20Optimization%20And%20Production%20Of%20Ethanol/Results%20and%20discussion.docx",
+            "size_bytes": 24349887,
+            "size_display": "23.2 MB",
+            "ext": "docx",
+            "drive_id": "1A_BrZgRojYk75oOsFIK-_8YrA20N8Aj3"
+          }
+        ]
+      },
+      {
+        "title": "Summary and Conclusion",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/my-ph-d-thesis-optimization-and-production-of-ethanol/summary-and-conclusion",
+        "files": [
+          {
+            "filename": "summray and conclusion.docx",
+            "rel_path": "materials/My%20Ph%20D%20Thesis%20Optimization%20And%20Production%20Of%20Ethanol/summray%20and%20conclusion.docx",
+            "size_bytes": 16762,
+            "size_display": "16 KB",
+            "ext": "docx",
+            "drive_id": "1PT1WlWYPPBYa825Da2VD6YVUF2m6A5o8"
+          }
+        ]
+      },
+      {
+        "title": "References",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/my-ph-d-thesis-optimization-and-production-of-ethanol/references",
+        "files": [
+          {
+            "filename": "bibliography.pdf",
+            "rel_path": "materials/My%20Ph%20D%20Thesis%20Optimization%20And%20Production%20Of%20Ethanol/bibliography.pdf",
+            "size_bytes": 6425689,
+            "size_display": "6.1 MB",
+            "ext": "pdf",
+            "drive_id": "1DdFEhoIowd3fbkx-J3XIhuP-ldCbDNBV"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bioanalytical Techniques",
+    "raw_category": "Bioanalytical Techniques Book",
+    "icon": "fa-book-medical",
+    "badge": "Textbook & Reference",
+    "description": "Complete reference text on bioanalytical instrumentation, chromatography, electrophoresis, spectroscopy, and analytical techniques.",
+    "order": 8,
+    "topics": [
+      {
+        "title": "Bioanalytical techniques book",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/bioanalytical-techniques-book",
+        "files": [
+          {
+            "filename": "Analytical Techniques book.pdf",
+            "rel_path": "materials/Bioanalytical%20Techniques%20Book/Analytical%20Techniques%20book.pdf",
+            "size_bytes": 7900083,
+            "size_display": "7.5 MB",
+            "ext": "pdf",
+            "drive_id": "1u9xvaPN_B3MTVrjw00T6Vw3dO39xHf1G"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Human Physiology",
+    "raw_category": "Human Physiology",
+    "icon": "fa-heart-pulse",
+    "badge": "Physiology",
+    "description": "Detailed physiological systems including cardiovascular dynamics, lymphatic circulation, and respiratory mechanics.",
+    "order": 9,
+    "topics": [
+      {
+        "title": "Human Physiology",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/human-physiology",
+        "files": []
+      },
+      {
+        "title": "Cardiovasular system",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/human-physiology/cardiovasular-system",
+        "files": [
+          {
+            "filename": "Human physiology(BCH1801)- unit 1- cardiovasular system and lymphatic system.pptx",
+            "rel_path": "materials/Human%20Physiology/Human%20physiology%28BCH1801%29-%20unit%201-%20cardiovasular%20system%20and%20lymphatic%20system.pptx",
+            "size_bytes": 1800487,
+            "size_display": "1.7 MB",
+            "ext": "pptx",
+            "drive_id": "1VDqn1x2WrT50Ebg2B2oCQImcd_yi1efo"
+          }
+        ]
+      },
+      {
+        "title": "Lymphatic system",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/human-physiology/lymphatic-system",
+        "files": [
+          {
+            "filename": "Human Physiology(BCH1801)-unit 1- lymphatic system.pptx",
+            "rel_path": "materials/Human%20Physiology/Human%20Physiology%28BCH1801%29-unit%201-%20lymphatic%20system.pptx",
+            "size_bytes": 1445728,
+            "size_display": "1.4 MB",
+            "ext": "pptx",
+            "drive_id": "1N8-_AjNdtENueGbv8u6seDOV9ELegAMy"
+          }
+        ]
+      },
+      {
+        "title": "Respiratory system",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/human-physiology/respiratory-system",
+        "files": [
+          {
+            "filename": "Human Physiology(BCH1801)-unit 2- respiratory system.pptx",
+            "rel_path": "materials/Human%20Physiology/Human%20Physiology%28BCH1801%29-unit%202-%20respiratory%20system.pptx",
+            "size_bytes": 2077393,
+            "size_display": "2.0 MB",
+            "ext": "pptx",
+            "drive_id": "1dxnbCG5rrqcRg1YQ3yHfQrLNQNq8qZz6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Laboratory Manuals",
+    "raw_category": "Laboratory Manuals",
+    "icon": "fa-vial-circle-check",
+    "badge": "Practical & Lab",
+    "description": "Practical protocols, standard operating procedures, and Downstream Processing laboratory manual for undergraduate & postgraduate curricula.",
+    "order": 10,
+    "topics": [
+      {
+        "title": "Laboratory Manuals",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/laboratory-manuals",
+        "files": []
+      },
+      {
+        "title": "Downstream processing lab manual",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/laboratory-manuals/downstream-processing-lab-manual",
+        "files": [
+          {
+            "filename": "Down stream processing lab manual.doc",
+            "rel_path": "materials/Laboratory%20Manuals/Down%20stream%20processing%20lab%20manual.doc",
+            "size_bytes": 371712,
+            "size_display": "363 KB",
+            "ext": "doc",
+            "drive_id": "1xXtwnel-eiAcwj3--rfL1HW2wp3rfTNf"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Home",
+    "raw_category": "Home",
+    "icon": "fa-leaf",
+    "badge": "General & Ecology",
+    "description": "Foundational environmental studies, biodiversity, natural resources conservation, and general course introductions.",
+    "order": 11,
+    "topics": [
+      {
+        "title": "Environmental studies",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/home/environmental-studies",
+        "files": []
+      },
+      {
+        "title": "Natural resources",
+        "url": "https://sites.google.com/site/dranupamabiochemistry/home/environmental-studies/natural-resources",
+        "files": []
+      }
+    ]
+  }
+]
