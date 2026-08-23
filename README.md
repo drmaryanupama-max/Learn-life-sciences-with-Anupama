@@ -1,6 +1,6 @@
-# Dr. M. Mary Anupama - Biochemistry & Biotechnology Hub
+# Dr Palukurty Mary Anupama - Biochemistry & Biotechnology Hub
 
-A modern, responsive academic repository preserving and showcasing curated lecture notes, digital textbooks, laboratory protocols, and research dissertations in Molecular Life Sciences and Medical Biochemistry by **Dr. M. Mary Anupama, Ph.D.**
+A modern, responsive academic repository preserving and showcasing curated lecture notes, digital textbooks, laboratory protocols, and research dissertations in Molecular Life Sciences and Medical Biochemistry by **Dr Palukurty Mary Anupama, Ph.D.**
 
 ---
 
