@@ -47,6 +47,31 @@ function updateThemeIcon(theme) {
 }
 
 // ==========================================================================
+// File Viewer Helper
+// ==========================================================================
+
+/**
+ * Returns the best viewer URL for a given relative file path.
+ * - PDFs: open directly (browser renders inline)
+ * - DOCX / DOC / PPTX: open via Microsoft Office Online viewer
+ *   using the page's public base URL so it works on GitHub Pages & Cloudflare.
+ */
+function getViewerUrl(relPath) {
+  const ext = relPath.split('.').pop().toLowerCase();
+  if (ext === 'pdf') {
+    return relPath; // browser opens PDFs natively
+  }
+  // Build the absolute public URL for Office viewer
+  const base = window.location.href.replace(/\/[^/]*$/, ''); // strip filename
+  const absUrl = encodeURIComponent(base + '/' + relPath);
+  return `https://view.officeapps.live.com/op/view.aspx?src=${absUrl}`;
+}
+
+function openFile(relPath, filename) {
+  window.open(getViewerUrl(relPath), '_blank');
+}
+
+// ==========================================================================
 // Data Fetching & Loading
 // ==========================================================================
 
@@ -182,9 +207,14 @@ function renderSpotlight() {
       </div>
       <div class="spotlight-footer">
         <span class="file-meta-pill"><i class="fa-solid fa-file"></i> ${item.size} (${item.type})</span>
-        <a href="${item.file}" download="${item.filename}" target="_blank" class="btn-primary" style="padding: 0.45rem 1rem; font-size: 0.82rem;">
-          <i class="fa-solid fa-download"></i> View / Download
-        </a>
+        <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
+          <button onclick="openFile('${item.file}', '${item.filename}')" class="btn-primary" style="padding: 0.45rem 1rem; font-size: 0.82rem; cursor:pointer; border:none;">
+            <i class="fa-solid fa-eye"></i> View
+          </button>
+          <a href="${item.file}" download="${item.filename}" class="btn-outline" style="padding: 0.45rem 1rem; font-size: 0.82rem;">
+            <i class="fa-solid fa-download"></i> Download
+          </a>
+        </div>
       </div>
     </div>
   `).join('');
@@ -283,13 +313,20 @@ function renderCategories() {
                   ${topic.files.length > 0 ? topic.files.map(f => {
                     const extClass = `ext-${f.ext}`;
                     return `
-                      <a href="${f.rel_path}" download="${f.filename}" target="_blank" class="file-item-btn" title="Download ${f.filename}">
-                        <div class="file-btn-left">
+                      <div class="file-item-btn">
+                        <div class="file-btn-left" style="flex:1; min-width:0;" onclick="openFile('${f.rel_path}', '${f.filename}')" style="cursor:pointer;">
                           <span class="ext-badge ${extClass}">${f.ext}</span>
-                          <span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${f.filename}</span>
+                          <span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor:pointer;" title="Click to view">${f.filename}</span>
                         </div>
-                        <span style="font-size: 0.75rem; color: var(--text-subtle);">${f.size_display}</span>
-                      </a>
+                        <div style="display:flex; gap:0.4rem; align-items:center; flex-shrink:0;">
+                          <button onclick="openFile('${f.rel_path}', '${f.filename}')" title="View in browser" style="background:var(--primary-light); color:var(--primary); border:none; border-radius:6px; padding:0.25rem 0.55rem; font-size:0.75rem; cursor:pointer; font-weight:600;">
+                            <i class="fa-solid fa-eye"></i>
+                          </button>
+                          <a href="${f.rel_path}" download="${f.filename}" title="Download file" style="background:var(--bg-surface); color:var(--text-muted); border:1px solid var(--border-subtle); border-radius:6px; padding:0.25rem 0.55rem; font-size:0.75rem; text-decoration:none; font-weight:600;">
+                            <i class="fa-solid fa-download"></i>
+                          </a>
+                        </div>
+                      </div>
                     `;
                   }).join('') : `
                     <div style="font-size: 0.85rem; color: var(--text-subtle); padding: 0.5rem 0;">
