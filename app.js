@@ -129,6 +129,7 @@ function toggleCategory(header) {
   const card = header.closest('.category-card');
   if (card) {
     card.classList.toggle('active');
+    card.classList.toggle('expanded');
   }
 }
 

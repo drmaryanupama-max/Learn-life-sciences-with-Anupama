@@ -717,7 +717,10 @@ a:hover {
   transition: transform var(--transition-normal);
 }
 
-.category-card.expanded .cat-toggle-icon {
+.category-card.active .cat-toggle-icon,
+.category-card.expanded .cat-toggle-icon,
+.category-card.active .category-toggle-icon,
+.category-card.expanded .category-toggle-icon {
   transform: rotate(180deg);
   background: var(--primary-light);
   color: var(--primary);
@@ -730,8 +733,9 @@ a:hover {
   background: var(--bg-surface);
 }
 
+.category-card.active .category-body,
 .category-card.expanded .category-body {
-  display: block;
+  display: block !important;
 }
 
 .category-description {
