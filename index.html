@@ -46,9 +46,6 @@
         <button id="themeToggle" class="btn-theme-toggle" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
           <i class="fa-solid fa-moon"></i>
         </button>
-        <a href="#youtube-lectures" class="btn-primary" style="background: #ef4444; border-color: #ef4444;">
-          <i class="fa-brands fa-youtube"></i> Watch Videos
-        </a>
       </div>
     </div>
   </header>
@@ -83,7 +80,7 @@
               <div class="stat-label">Subject Modules</div>
             </div>
             <div class="stat-item">
-              <div class="stat-value">54</div>
+              <div class="stat-value" style="color: #ef4444;">54</div>
               <div class="stat-label">YouTube Lectures</div>
             </div>
             <div class="stat-item">
@@ -132,31 +129,30 @@
     </div>
   </section>
 
-  <!-- YouTube Video Lectures Section -->
+  <!-- YouTube Video Lectures Masterclass Hub -->
   <section id="youtube-lectures" class="videos-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" style="text-align: center; margin-bottom: 2.5rem;">
         <div>
           <div class="videos-header-badge">
             <i class="fa-brands fa-youtube"></i> 54 Video Masterclasses
           </div>
           <h2 class="section-title">YouTube Lectures by Subject</h2>
-          <p class="section-subtitle">Organized video lessons with direct links to play on YouTube in a new tab.</p>
+          <p class="section-subtitle">Curated video lectures with direct links to play instantly on YouTube in a new tab.</p>
         </div>
       </div>
 
       <!-- Video Filter Pills & Search -->
-      <div style="margin-bottom: 2rem;">
-        <div class="search-bar-wrapper" style="margin-bottom: 1.25rem;">
-          <i class="fa-solid fa-magnifying-glass search-icon"></i>
-          <input type="text" id="videoSearchInput" class="search-input" placeholder="Search YouTube lectures (e.g. Urea cycle, Liver function, Enzyme kinetics, Antigens, Phenol)...">
-          <button id="clearVideoSearchBtn" class="clear-search-btn" title="Clear Search">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-        <div class="category-pills" id="videoSectionPills">
-          <!-- Injected via app.js -->
-        </div>
+      <div class="video-search-wrapper">
+        <i class="fa-solid fa-magnifying-glass video-search-icon"></i>
+        <input type="text" id="videoSearchInput" class="video-search-input" placeholder="Search YouTube lectures (e.g. Urea cycle, Liver function, Enzyme kinetics, Antigens)...">
+        <button id="clearVideoSearchBtn" class="video-clear-btn" title="Clear Search">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="video-pills-wrap" id="videoSectionPills">
+        <!-- Injected via app.js -->
       </div>
 
       <!-- Video Section Groups Grid -->
@@ -306,7 +302,7 @@
     </div>
   </footer>
 
-  <!-- Embedded Dataset fallback for seamless offline file:// execution -->
+  <!-- Embedded Datasets fallback for seamless offline file:// execution -->
   <script>
     window.EMBEDDED_DATA = [
   {
@@ -1322,6 +1318,494 @@
         "files": []
       }
     ]
+  }
+];
+    window.EMBEDDED_VIDEOS = [
+  {
+    "sno": 1,
+    "subject": "Environmental Biochemistry",
+    "title": "Degradation of Phenol",
+    "url": "https://www.youtube.com/watch?v=V6JzW5yzmv0",
+    "videoId": "V6JzW5yzmv0",
+    "thumbnail": "https://img.youtube.com/vi/V6JzW5yzmv0/hqdefault.jpg",
+    "section": "Environmental Studies & Ecology"
+  },
+  {
+    "sno": 2,
+    "subject": "Biochemistry \u2013 Proteins",
+    "title": "Basics of Amino Acids and Proteins",
+    "url": "https://www.youtube.com/watch?v=NZQ1RN1GL1M",
+    "videoId": "NZQ1RN1GL1M",
+    "thumbnail": "https://img.youtube.com/vi/NZQ1RN1GL1M/hqdefault.jpg",
+    "section": "Metabolism & Proteins"
+  },
+  {
+    "sno": 3,
+    "subject": "Food Science / Food Safety",
+    "title": "Food Safety Management Tools",
+    "url": "https://www.youtube.com/watch?v=r03QFXTDNKE",
+    "videoId": "r03QFXTDNKE",
+    "thumbnail": "https://img.youtube.com/vi/r03QFXTDNKE/hqdefault.jpg",
+    "section": "Food Science & Safety"
+  },
+  {
+    "sno": 4,
+    "subject": "Food Safety",
+    "title": "Introduction to Management of Food Hazards",
+    "url": "https://www.youtube.com/watch?v=nqj0W4jTK-k",
+    "videoId": "nqj0W4jTK-k",
+    "thumbnail": "https://img.youtube.com/vi/nqj0W4jTK-k/hqdefault.jpg",
+    "section": "Food Science & Safety"
+  },
+  {
+    "sno": 5,
+    "subject": "Enzymology",
+    "title": "Nomenclature of Enzymes",
+    "url": "https://www.youtube.com/watch?v=cv5fRz4WmrA",
+    "videoId": "cv5fRz4WmrA",
+    "thumbnail": "https://img.youtube.com/vi/cv5fRz4WmrA/hqdefault.jpg",
+    "section": "Enzymology"
+  },
+  {
+    "sno": 6,
+    "subject": "Enzymology",
+    "title": "Introduction to Enzymology",
+    "url": "https://www.youtube.com/watch?v=QSpWnIxbrjY",
+    "videoId": "QSpWnIxbrjY",
+    "thumbnail": "https://img.youtube.com/vi/QSpWnIxbrjY/hqdefault.jpg",
+    "section": "Enzymology"
+  },
+  {
+    "sno": 7,
+    "subject": "Enzymology",
+    "title": "Interaction Between Enzyme and Substrate",
+    "url": "https://www.youtube.com/watch?v=-cB0a9TFiPg",
+    "videoId": "-cB0a9TFiPg",
+    "thumbnail": "https://img.youtube.com/vi/-cB0a9TFiPg/hqdefault.jpg",
+    "section": "Enzymology"
+  },
+  {
+    "sno": 8,
+    "subject": "Enzymology",
+    "title": "Enzyme Specificity and Active Site",
+    "url": "https://www.youtube.com/watch?v=RRohbEJRePo",
+    "videoId": "RRohbEJRePo",
+    "thumbnail": "https://img.youtube.com/vi/RRohbEJRePo/hqdefault.jpg",
+    "section": "Enzymology"
+  },
+  {
+    "sno": 9,
+    "subject": "Plant Biochemistry",
+    "title": "Nitrogen Fixation Part 3 \u2013 Assimilation of Nitrogen",
+    "url": "https://www.youtube.com/watch?v=4dq8VL_KMd0",
+    "videoId": "4dq8VL_KMd0",
+    "thumbnail": "https://img.youtube.com/vi/4dq8VL_KMd0/hqdefault.jpg",
+    "section": "Plant Biochemistry & Microbiology"
+  },
+  {
+    "sno": 10,
+    "subject": "Plant Biochemistry",
+    "title": "Nitrogen Fixation Part 2 \u2013 Types of Nitrogen Fixation",
+    "url": "https://www.youtube.com/watch?v=F06H7OKroVs",
+    "videoId": "F06H7OKroVs",
+    "thumbnail": "https://img.youtube.com/vi/F06H7OKroVs/hqdefault.jpg",
+    "section": "Plant Biochemistry & Microbiology"
+  },
+  {
+    "sno": 11,
+    "subject": "Plant Biochemistry",
+    "title": "Nitrogen Fixation Part 1 \u2013 Nitrogen Cycle",
+    "url": "https://www.youtube.com/watch?v=fxNyJ2gupAU",
+    "videoId": "fxNyJ2gupAU",
+    "thumbnail": "https://img.youtube.com/vi/fxNyJ2gupAU/hqdefault.jpg",
+    "section": "Plant Biochemistry & Microbiology"
+  },
+  {
+    "sno": 12,
+    "subject": "Microbiology",
+    "title": "Introduction to Microbiology",
+    "url": "https://www.youtube.com/watch?v=XcalEBhaMYs",
+    "videoId": "XcalEBhaMYs",
+    "thumbnail": "https://img.youtube.com/vi/XcalEBhaMYs/hqdefault.jpg",
+    "section": "Plant Biochemistry & Microbiology"
+  },
+  {
+    "sno": 13,
+    "subject": "Environmental Science",
+    "title": "A Clip of Talk on Earth Hour for FEBA Ministries",
+    "url": "https://www.youtube.com/watch?v=-C4auZArAvM",
+    "videoId": "-C4auZArAvM",
+    "thumbnail": "https://img.youtube.com/vi/-C4auZArAvM/hqdefault.jpg",
+    "section": "Environmental Studies & Ecology"
+  },
+  {
+    "sno": 14,
+    "subject": "Environmental Science / Water Conservation",
+    "title": "Catch the Rain When It Falls, Where It Falls",
+    "url": "https://www.youtube.com/watch?v=Qzk-ogp5h20",
+    "videoId": "Qzk-ogp5h20",
+    "thumbnail": "https://img.youtube.com/vi/Qzk-ogp5h20/hqdefault.jpg",
+    "section": "Environmental Studies & Ecology"
+  },
+  {
+    "sno": 15,
+    "subject": "Clinical Biochemistry",
+    "title": "Hemoglobin Related Disorders",
+    "url": "https://www.youtube.com/watch?v=C5PiBhG1NZQ",
+    "videoId": "C5PiBhG1NZQ",
+    "thumbnail": "https://img.youtube.com/vi/C5PiBhG1NZQ/hqdefault.jpg",
+    "section": "Clinical Biochemistry"
+  },
+  {
+    "sno": 16,
+    "subject": "Clinical Biochemistry",
+    "title": "Disorders of Lipid Metabolism",
+    "url": "https://www.youtube.com/watch?v=NNaGfkcigKc",
+    "videoId": "NNaGfkcigKc",
+    "thumbnail": "https://img.youtube.com/vi/NNaGfkcigKc/hqdefault.jpg",
+    "section": "Clinical Biochemistry"
+  },
+  {
+    "sno": 17,
+    "subject": "Clinical Biochemistry",
+    "title": "Disorders of Carbohydrate Metabolism",
+    "url": "https://www.youtube.com/watch?v=7_ywgPVgBfA",
+    "videoId": "7_ywgPVgBfA",
+    "thumbnail": "https://img.youtube.com/vi/7_ywgPVgBfA/hqdefault.jpg",
+    "section": "Clinical Biochemistry"
+  },
+  {
+    "sno": 18,
+    "subject": "Clinical Biochemistry",
+    "title": "Kidney Function Tests",
+    "url": "https://www.youtube.com/watch?v=7hR5GMU8oAA",
+    "videoId": "7hR5GMU8oAA",
+    "thumbnail": "https://img.youtube.com/vi/7hR5GMU8oAA/hqdefault.jpg",
+    "section": "Clinical Biochemistry"
+  },
+  {
+    "sno": 19,
+    "subject": "Clinical Biochemistry",
+    "title": "Liver Function Tests",
+    "url": "https://www.youtube.com/watch?v=v7Pz3ulcWd0",
+    "videoId": "v7Pz3ulcWd0",
+    "thumbnail": "https://img.youtube.com/vi/v7Pz3ulcWd0/hqdefault.jpg",
+    "section": "Clinical Biochemistry"
+  },
+  {
+    "sno": 20,
+    "subject": "Clinical Biochemistry",
+    "title": "Sample Collection Methods Used in Clinical Laboratories",
+    "url": "https://www.youtube.com/watch?v=166NchipvM8",
+    "videoId": "166NchipvM8",
+    "thumbnail": "https://img.youtube.com/vi/166NchipvM8/hqdefault.jpg",
+    "section": "Clinical Biochemistry"
+  },
+  {
+    "sno": 21,
+    "subject": "Immunology",
+    "title": "Complement System",
+    "url": "https://www.youtube.com/watch?v=YlbTQB2XkeY",
+    "videoId": "YlbTQB2XkeY",
+    "thumbnail": "https://img.youtube.com/vi/YlbTQB2XkeY/hqdefault.jpg",
+    "section": "Immunology"
+  },
+  {
+    "sno": 22,
+    "subject": "Clinical Biochemistry",
+    "title": "Automation in Clinical Laboratories",
+    "url": "https://www.youtube.com/watch?v=qlaseKcgExA",
+    "videoId": "qlaseKcgExA",
+    "thumbnail": "https://img.youtube.com/vi/qlaseKcgExA/hqdefault.jpg",
+    "section": "Clinical Biochemistry"
+  },
+  {
+    "sno": 23,
+    "subject": "Clinical Biochemistry",
+    "title": "Gastric Function Tests",
+    "url": "https://www.youtube.com/watch?v=lFkPRZtGHBQ",
+    "videoId": "lFkPRZtGHBQ",
+    "thumbnail": "https://img.youtube.com/vi/lFkPRZtGHBQ/hqdefault.jpg",
+    "section": "Clinical Biochemistry"
+  },
+  {
+    "sno": 24,
+    "subject": "Clinical Biochemistry / Vitamins",
+    "title": "Fat Soluble Vitamins",
+    "url": "https://www.youtube.com/watch?v=M04o9IULKt0",
+    "videoId": "M04o9IULKt0",
+    "thumbnail": "https://img.youtube.com/vi/M04o9IULKt0/hqdefault.jpg",
+    "section": "Clinical Biochemistry"
+  },
+  {
+    "sno": 25,
+    "subject": "Clinical Biochemistry",
+    "title": "Introduction to Clinical Biochemistry",
+    "url": "https://www.youtube.com/watch?v=hg0OsRfr-KU",
+    "videoId": "hg0OsRfr-KU",
+    "thumbnail": "https://img.youtube.com/vi/hg0OsRfr-KU/hqdefault.jpg",
+    "section": "Clinical Biochemistry"
+  },
+  {
+    "sno": 26,
+    "subject": "Biochemistry \u2013 Porphyrin Metabolism",
+    "title": "Porphyrin Metabolism",
+    "url": "https://www.youtube.com/watch?v=BE8fT4Jm7fk",
+    "videoId": "BE8fT4Jm7fk",
+    "thumbnail": "https://img.youtube.com/vi/BE8fT4Jm7fk/hqdefault.jpg",
+    "section": "Metabolism & Proteins"
+  },
+  {
+    "sno": 27,
+    "subject": "Biochemistry \u2013 Nucleotide Metabolism",
+    "title": "Nucleotide Metabolism",
+    "url": "https://www.youtube.com/watch?v=ciJ5XpDuKiM",
+    "videoId": "ciJ5XpDuKiM",
+    "thumbnail": "https://img.youtube.com/vi/ciJ5XpDuKiM/hqdefault.jpg",
+    "section": "Metabolism & Proteins"
+  },
+  {
+    "sno": 28,
+    "subject": "Immunology",
+    "title": "Genetic Control of Antibody Diversity / Secretion of Antibodies",
+    "url": "https://www.youtube.com/watch?v=7CneCBaHiWU",
+    "videoId": "7CneCBaHiWU",
+    "thumbnail": "https://img.youtube.com/vi/7CneCBaHiWU/hqdefault.jpg",
+    "section": "Immunology"
+  },
+  {
+    "sno": 29,
+    "subject": "Immunology",
+    "title": "Introduction to Immune System",
+    "url": "https://www.youtube.com/watch?v=iYusR8k6Y-M",
+    "videoId": "iYusR8k6Y-M",
+    "thumbnail": "https://img.youtube.com/vi/iYusR8k6Y-M/hqdefault.jpg",
+    "section": "Immunology"
+  },
+  {
+    "sno": 30,
+    "subject": "Environmental Science",
+    "title": "Environmental Pollution Part II",
+    "url": "https://www.youtube.com/watch?v=__bw2I2coG0",
+    "videoId": "__bw2I2coG0",
+    "thumbnail": "https://img.youtube.com/vi/__bw2I2coG0/hqdefault.jpg",
+    "section": "Environmental Studies & Ecology"
+  },
+  {
+    "sno": 31,
+    "subject": "Environmental Science",
+    "title": "Environmental Pollution Part I",
+    "url": "https://www.youtube.com/watch?v=R5WX2vaS4Is",
+    "videoId": "R5WX2vaS4Is",
+    "thumbnail": "https://img.youtube.com/vi/R5WX2vaS4Is/hqdefault.jpg",
+    "section": "Environmental Studies & Ecology"
+  },
+  {
+    "sno": 32,
+    "subject": "Environmental Science / Biodiversity",
+    "title": "Biodiversity and Conservation of Biodiversity",
+    "url": "https://www.youtube.com/watch?v=K0zggKvnG_w",
+    "videoId": "K0zggKvnG_w",
+    "thumbnail": "https://img.youtube.com/vi/K0zggKvnG_w/hqdefault.jpg",
+    "section": "Environmental Studies & Ecology"
+  },
+  {
+    "sno": 33,
+    "subject": "Environmental Science / Ecology",
+    "title": "Introduction to Ecosystem",
+    "url": "https://www.youtube.com/watch?v=oQD3YrQ5r1I",
+    "videoId": "oQD3YrQ5r1I",
+    "thumbnail": "https://img.youtube.com/vi/oQD3YrQ5r1I/hqdefault.jpg",
+    "section": "Environmental Studies & Ecology"
+  },
+  {
+    "sno": 34,
+    "subject": "Environmental Science / Ecology",
+    "title": "Types of Ecosystems",
+    "url": "https://www.youtube.com/watch?v=9JSU9zXuJnA",
+    "videoId": "9JSU9zXuJnA",
+    "thumbnail": "https://img.youtube.com/vi/9JSU9zXuJnA/hqdefault.jpg",
+    "section": "Environmental Studies & Ecology"
+  },
+  {
+    "sno": 35,
+    "subject": "Environmental Science / Ecology",
+    "title": "Ecological Pyramids \u2013 Ecosystem",
+    "url": "https://www.youtube.com/watch?v=i3IkI_Op4fk",
+    "videoId": "i3IkI_Op4fk",
+    "thumbnail": "https://img.youtube.com/vi/i3IkI_Op4fk/hqdefault.jpg",
+    "section": "Environmental Studies & Ecology"
+  },
+  {
+    "sno": 36,
+    "subject": "Environmental Science / Ecology",
+    "title": "Food Chains of Ecosystem",
+    "url": "https://www.youtube.com/watch?v=uut6pqS5bJQ",
+    "videoId": "uut6pqS5bJQ",
+    "thumbnail": "https://img.youtube.com/vi/uut6pqS5bJQ/hqdefault.jpg",
+    "section": "Environmental Studies & Ecology"
+  },
+  {
+    "sno": 37,
+    "subject": "Environmental Science",
+    "title": "Earth Day with FEBA Ministries Online",
+    "url": "https://www.youtube.com/watch?v=0HGkq6tzMn8",
+    "videoId": "0HGkq6tzMn8",
+    "thumbnail": "https://img.youtube.com/vi/0HGkq6tzMn8/hqdefault.jpg",
+    "section": "Environmental Studies & Ecology"
+  },
+  {
+    "sno": 38,
+    "subject": "Food Science / Nutrition",
+    "title": "Food Resources",
+    "url": "https://www.youtube.com/watch?v=I8Swbadszj0",
+    "videoId": "I8Swbadszj0",
+    "thumbnail": "https://img.youtube.com/vi/I8Swbadszj0/hqdefault.jpg",
+    "section": "Food Science & Safety"
+  },
+  {
+    "sno": 39,
+    "subject": "Public Health / COVID-19",
+    "title": "2019 nCoV Pandemic \u2013 Strategies for Students and Academics to Overcome Stressful Environment",
+    "url": "https://www.youtube.com/watch?v=sBhNA1D_XHs",
+    "videoId": "sBhNA1D_XHs",
+    "thumbnail": "https://img.youtube.com/vi/sBhNA1D_XHs/hqdefault.jpg",
+    "section": "Public Health & Higher Education"
+  },
+  {
+    "sno": 40,
+    "subject": "Education / COVID-19",
+    "title": "Impact of Online Education and the Tools Being Used for Effective Teaching",
+    "url": "https://www.youtube.com/watch?v=dXF4BGaQxRQ",
+    "videoId": "dXF4BGaQxRQ",
+    "thumbnail": "https://img.youtube.com/vi/dXF4BGaQxRQ/hqdefault.jpg",
+    "section": "Public Health & Higher Education"
+  },
+  {
+    "sno": 41,
+    "subject": "Public Health / COVID-19",
+    "title": "Challenges in the Fields of Medicine and Diagnostics During Post COVID Era",
+    "url": "https://www.youtube.com/watch?v=iAPJSP51b_U",
+    "videoId": "iAPJSP51b_U",
+    "thumbnail": "https://img.youtube.com/vi/iAPJSP51b_U/hqdefault.jpg",
+    "section": "Public Health & Higher Education"
+  },
+  {
+    "sno": 42,
+    "subject": "Environmental Science / Water Resources",
+    "title": "Natural Resources \u2013 Water Resources",
+    "url": "https://www.youtube.com/watch?v=la0y4uF_laM",
+    "videoId": "la0y4uF_laM",
+    "thumbnail": "https://img.youtube.com/vi/la0y4uF_laM/hqdefault.jpg",
+    "section": "Environmental Studies & Ecology"
+  },
+  {
+    "sno": 43,
+    "subject": "Environmental Science / Forest Resources",
+    "title": "Natural Resources \u2013 Forest Resources",
+    "url": "https://www.youtube.com/watch?v=MJUp_WQTCP0",
+    "videoId": "MJUp_WQTCP0",
+    "thumbnail": "https://img.youtube.com/vi/MJUp_WQTCP0/hqdefault.jpg",
+    "section": "Environmental Studies & Ecology"
+  },
+  {
+    "sno": 44,
+    "subject": "Environmental Science",
+    "title": "Multidisciplinary Nature of Environmental Studies",
+    "url": "https://www.youtube.com/watch?v=ddGVCERcJEU",
+    "videoId": "ddGVCERcJEU",
+    "thumbnail": "https://img.youtube.com/vi/ddGVCERcJEU/hqdefault.jpg",
+    "section": "Environmental Studies & Ecology"
+  },
+  {
+    "sno": 45,
+    "subject": "Biochemistry \u2013 Amino Acid Metabolism",
+    "title": "Metabolism of Branched Chain Amino Acids",
+    "url": "https://www.youtube.com/watch?v=aLYc9VDrzLc",
+    "videoId": "aLYc9VDrzLc",
+    "thumbnail": "https://img.youtube.com/vi/aLYc9VDrzLc/hqdefault.jpg",
+    "section": "Metabolism & Proteins"
+  },
+  {
+    "sno": 46,
+    "subject": "Biochemistry \u2013 Amino Acid Metabolism",
+    "title": "Glucogenic and Ketogenic Amino Acids",
+    "url": "https://www.youtube.com/watch?v=_t0l8Y2WeHM",
+    "videoId": "_t0l8Y2WeHM",
+    "thumbnail": "https://img.youtube.com/vi/_t0l8Y2WeHM/hqdefault.jpg",
+    "section": "Metabolism & Proteins"
+  },
+  {
+    "sno": 47,
+    "subject": "Biochemistry \u2013 Amino Acid Metabolism",
+    "title": "Aromatic Amino Acid Metabolism",
+    "url": "https://www.youtube.com/watch?v=bJOoaDcwOsQ",
+    "videoId": "bJOoaDcwOsQ",
+    "thumbnail": "https://img.youtube.com/vi/bJOoaDcwOsQ/hqdefault.jpg",
+    "section": "Metabolism & Proteins"
+  },
+  {
+    "sno": 48,
+    "subject": "Biochemistry \u2013 Amino Acid Metabolism",
+    "title": "Reactions of Amino Acids",
+    "url": "https://www.youtube.com/watch?v=sZbqb0VPenE",
+    "videoId": "sZbqb0VPenE",
+    "thumbnail": "https://img.youtube.com/vi/sZbqb0VPenE/hqdefault.jpg",
+    "section": "Metabolism & Proteins"
+  },
+  {
+    "sno": 49,
+    "subject": "Biochemistry \u2013 Urea Cycle",
+    "title": "Urea Cycle",
+    "url": "https://www.youtube.com/watch?v=xCVty2422fY",
+    "videoId": "xCVty2422fY",
+    "thumbnail": "https://img.youtube.com/vi/xCVty2422fY/hqdefault.jpg",
+    "section": "Metabolism & Proteins"
+  },
+  {
+    "sno": 50,
+    "subject": "Immunology",
+    "title": "Agglutination and Complement Fixation Reactions",
+    "url": "https://www.youtube.com/watch?v=4OZer4q0wTA",
+    "videoId": "4OZer4q0wTA",
+    "thumbnail": "https://img.youtube.com/vi/4OZer4q0wTA/hqdefault.jpg",
+    "section": "Immunology"
+  },
+  {
+    "sno": 51,
+    "subject": "Immunology",
+    "title": "Precipitation Reactions",
+    "url": "https://www.youtube.com/watch?v=e_1bxwFWkxk",
+    "videoId": "e_1bxwFWkxk",
+    "thumbnail": "https://img.youtube.com/vi/e_1bxwFWkxk/hqdefault.jpg",
+    "section": "Immunology"
+  },
+  {
+    "sno": 52,
+    "subject": "Immunology",
+    "title": "Introduction to Ag-Ab Reactions",
+    "url": "https://www.youtube.com/watch?v=8Y4DfaBkKUw",
+    "videoId": "8Y4DfaBkKUw",
+    "thumbnail": "https://img.youtube.com/vi/8Y4DfaBkKUw/hqdefault.jpg",
+    "section": "Immunology"
+  },
+  {
+    "sno": 53,
+    "subject": "Immunology",
+    "title": "Antigens",
+    "url": "https://www.youtube.com/watch?v=I2T5LTUsA8w",
+    "videoId": "I2T5LTUsA8w",
+    "thumbnail": "https://img.youtube.com/vi/I2T5LTUsA8w/hqdefault.jpg",
+    "section": "Immunology"
+  },
+  {
+    "sno": 54,
+    "subject": "Immunology",
+    "title": "Transplantation Immunology",
+    "url": "https://www.youtube.com/watch?v=5achQ-dgvos",
+    "videoId": "5achQ-dgvos",
+    "thumbnail": "https://img.youtube.com/vi/5achQ-dgvos/hqdefault.jpg",
+    "section": "Immunology"
   }
 ];
   </script>

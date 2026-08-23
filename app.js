@@ -908,6 +908,10 @@ const YOUTUBE_VIDEOS = [
   }
 ];
 
+if (typeof YOUTUBE_VIDEOS === 'undefined' || !YOUTUBE_VIDEOS.length) {
+  var YOUTUBE_VIDEOS = window.EMBEDDED_VIDEOS || [];
+}
+
 let currentVideoSection = 'all';
 
 function renderYouTubeVideos(filterSection = 'all', searchQuery = '') {
@@ -925,17 +929,17 @@ function renderYouTubeVideos(filterSection = 'all', searchQuery = '') {
   // Render Video Filter Pills if not already rendered
   if (pillsContainer && pillsContainer.children.length === 0) {
     const allPill = document.createElement('button');
-    allPill.className = 'pill-btn active';
+    allPill.className = 'video-pill-btn active';
     allPill.dataset.vsection = 'all';
-    allPill.innerHTML = '<i class="fa-brands fa-youtube" style="color:#ef4444;"></i> All Videos <span class="pill-badge">' + YOUTUBE_VIDEOS.length + '</span>';
+    allPill.innerHTML = '<i class="fa-brands fa-youtube" style="color:#ef4444;"></i> All Videos <span class="video-pill-badge">' + YOUTUBE_VIDEOS.length + '</span>';
     allPill.addEventListener('click', () => filterVideoSection('all'));
     pillsContainer.appendChild(allPill);
 
     Object.keys(sectionCounts).forEach(sec => {
       const pill = document.createElement('button');
-      pill.className = 'pill-btn';
+      pill.className = 'video-pill-btn';
       pill.dataset.vsection = sec;
-      pill.innerHTML = sec + ' <span class="pill-badge">' + sectionCounts[sec] + '</span>';
+      pill.innerHTML = sec + ' <span class="video-pill-badge">' + sectionCounts[sec] + '</span>';
       pill.addEventListener('click', () => filterVideoSection(sec));
       pillsContainer.appendChild(pill);
     });
@@ -1025,7 +1029,7 @@ function renderYouTubeVideos(filterSection = 'all', searchQuery = '') {
 
 function filterVideoSection(section) {
   currentVideoSection = section;
-  const pills = document.querySelectorAll('#videoSectionPills .pill-btn');
+  const pills = document.querySelectorAll('#videoSectionPills .video-pill-btn');
   pills.forEach(p => {
     if (p.dataset.vsection === section) {
       p.classList.add('active');

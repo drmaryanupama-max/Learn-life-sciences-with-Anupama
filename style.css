@@ -1060,32 +1060,156 @@ a:hover {
 
 
 /* ==========================================================================
-   YouTube Lectures Section
+   YouTube Lectures E-Learning Hub (Premium Dark Dashboard Aesthetic)
    ========================================================================== */
 
 .videos-section {
-  padding: 5rem 0;
-  background: var(--bg-surface-subtle);
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  padding: 5.5rem 0;
+  background: radial-gradient(circle at 10% 10%, rgba(239, 68, 68, 0.08) 0%, transparent 40%),
+              radial-gradient(circle at 90% 90%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+              #090d16;
+  color: #f8fafc;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .videos-header-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.35rem 0.95rem;
-  background: rgba(239, 68, 68, 0.12);
-  color: #ef4444;
+  padding: 0.4rem 1.1rem;
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
   border-radius: var(--radius-full);
   font-size: 0.85rem;
   font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.videos-section .section-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+}
+
+.videos-section .section-subtitle {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+.video-search-wrapper {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto 1.75rem auto;
+}
+
+.video-search-input {
+  width: 100%;
+  padding: 1rem 3.25rem 1rem 3.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background: rgba(30, 41, 59, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all var(--transition-normal);
+}
+
+.video-search-input::placeholder {
+  color: #64748b;
+}
+
+.video-search-input:focus {
+  outline: none;
+  border-color: #ef4444;
+  background: rgba(30, 41, 59, 1);
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.25), 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.video-search-icon {
+  position: absolute;
+  left: 1.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ef4444;
+  font-size: 1.15rem;
+}
+
+.video-clear-btn {
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #94a3b8;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.video-clear-btn:hover {
+  background: rgba(239, 68, 68, 0.8);
+  color: #ffffff;
+}
+
+.video-pills-wrap {
+  display: flex;
+  gap: 0.65rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+}
+
+.video-pill-btn {
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--radius-full);
+  background: rgba(30, 41, 59, 0.8);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.video-pill-btn:hover {
+  background: rgba(51, 65, 85, 1);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.video-pill-btn.active {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #ffffff;
+  border-color: #ef4444;
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.4);
+}
+
+.video-pill-badge {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
 }
 
 .video-section-group {
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
 }
 
 .video-section-group:last-child {
@@ -1096,70 +1220,70 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 2px solid var(--border-subtle);
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .video-section-title-wrap {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 
 .video-section-title-wrap i {
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   color: #ef4444;
 }
 
 .video-section-title {
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
-  color: var(--text-main);
+  color: #ffffff;
   margin: 0;
 }
 
 .video-count-badge {
   font-size: 0.8rem;
   font-weight: 700;
-  padding: 0.25rem 0.7rem;
+  padding: 0.3rem 0.85rem;
   border-radius: var(--radius-full);
-  background: var(--bg-surface);
-  color: var(--text-muted);
-  border: 1px solid var(--border-subtle);
+  background: rgba(30, 41, 59, 0.9);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 1.75rem;
 }
 
 .video-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
+  background: #131d31;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: all var(--transition-normal);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
   text-decoration: none;
   color: inherit;
 }
 
 .video-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   border-color: #ef4444;
-  box-shadow: 0 15px 30px -10px rgba(239, 68, 68, 0.2), var(--shadow-lg);
+  box-shadow: 0 20px 35px -10px rgba(239, 68, 68, 0.35), 0 0 20px rgba(239, 68, 68, 0.2);
 }
 
 .video-thumb-wrapper {
   position: relative;
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  background: #0f172a;
+  background: #0b1329;
   overflow: hidden;
 }
 
@@ -1170,11 +1294,11 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-normal);
+  transition: transform 0.4s ease;
 }
 
 .video-card:hover .video-thumb-img {
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
 .video-play-overlay {
@@ -1182,27 +1306,27 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 52px;
-  height: 52px;
-  background: rgba(239, 68, 68, 0.92);
+  width: 56px;
+  height: 56px;
+  background: rgba(239, 68, 68, 0.95);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  font-size: 1.3rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  font-size: 1.4rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
   transition: all var(--transition-fast);
 }
 
 .video-card:hover .video-play-overlay {
-  background: #dc2626;
-  transform: translate(-50%, -50%) scale(1.15);
-  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.6);
+  background: #ff0000;
+  transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 0 0 30px rgba(239, 68, 68, 0.9);
 }
 
 .video-card-body {
-  padding: 1.15rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -1213,20 +1337,20 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
+  color: #34d399;
+  margin-bottom: 0.6rem;
 }
 
 .video-card-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  line-height: 1.4;
-  color: var(--text-main);
-  margin-bottom: 1rem;
+  line-height: 1.45;
+  color: #f1f5f9;
+  margin-bottom: 1.25rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -1237,24 +1361,20 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--border-subtle);
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .video-yt-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: #ef4444;
   transition: color var(--transition-fast);
 }
 
 .video-card:hover .video-yt-btn {
-  color: #dc2626;
-}
-
-.video-yt-btn i {
-  font-size: 1rem;
+  color: #ff4d4d;
 }
