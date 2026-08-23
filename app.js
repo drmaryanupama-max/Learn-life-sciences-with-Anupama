@@ -138,6 +138,13 @@ function initCurriculumFilters() {
   const clearBtn = document.getElementById('clearSearchBtn');
   const catCards = document.querySelectorAll('.category-card');
 
+  // Attach click listener to all category headers directly
+  document.querySelectorAll('.category-header').forEach(header => {
+    header.addEventListener('click', () => {
+      toggleCategory(header);
+    });
+  });
+
   if (!pills.length && !searchInput) return;
 
   pills.forEach(pill => {
@@ -177,10 +184,15 @@ function initCurriculumFilters() {
 
       if (matchesCat && matchesQuery) {
         card.style.display = 'block';
-        if (q) {
-          card.classList.add('active'); // auto-expand on search
+        if (q || activeCat !== 'all') {
+          card.classList.add('active'); // auto-expand on specific filter or search
         }
       } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+} else {
         card.style.display = 'none';
       }
     });
