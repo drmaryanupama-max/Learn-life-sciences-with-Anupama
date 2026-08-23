@@ -11,6 +11,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Direct self-contained overrides to guarantee functionality */
+    .category-header {
+      cursor: pointer !important;
+      user-select: none;
+    }
+    .category-header:hover {
+      background: var(--bg-surface-subtle) !important;
+    }
+    .file-item-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.65rem 0.85rem;
+      background: var(--bg-surface-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      color: var(--text-main);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      margin-bottom: 0.4rem;
+    }
+    .file-item-btn:hover {
+      background: var(--bg-surface);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    .file-btn-left {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      overflow: hidden;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .ext-badge {
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .ext-pdf { background: #fee2e2; color: #dc2626; }
+    .ext-docx, .ext-doc { background: #e0f2fe; color: #0284c7; }
+    .ext-pptx, .ext-ppt { background: #ffedd5; color: #ea580c; }
+  </style>
 </head>
 <body>
   
@@ -25,7 +74,11 @@
       
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">Home</a></li><li><a href="youtube.html" class="nav-link"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> YouTube Lectures</a></li><li><a href="curriculum.html" class="nav-link active"><i class="fa-solid fa-book-open"></i> Curriculum Notes</a></li><li><a href="research.html" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Textbooks & Thesis</a></li><li><a href="about.html" class="nav-link"><i class="fa-solid fa-user-doctor"></i> About & Contact</a></li>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="youtube.html" class="nav-link"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> YouTube Lectures</a></li>
+          <li><a href="curriculum.html" class="nav-link active"><i class="fa-solid fa-book-open"></i> Curriculum Notes</a></li>
+          <li><a href="research.html" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Textbooks & Thesis</a></li>
+          <li><a href="about.html" class="nav-link"><i class="fa-solid fa-user-doctor"></i> About & Contact</a></li>
         </ul>
       </nav>
       
@@ -37,21 +90,18 @@
     </div>
   </header>
 
-
   <section class="search-section" style="padding-top: 2rem;">
     <div class="container">
-
-
       <div class="search-bar-wrapper">
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <input type="text" id="searchInput" class="search-input" placeholder="Search curriculum materials (e.g. AC Deb, liver function, antibody, ethanol, unit V)...">
-        <button id="clearSearchBtn" class="clear-search-btn" title="Clear Search">
+        <input type="text" id="searchInput" class="search-input" oninput="searchCurriculum(this.value)" placeholder="Search curriculum materials (e.g. AC Deb, liver function, antibody, ethanol, unit V)...">
+        <button id="clearSearchBtn" class="clear-search-btn" onclick="clearCurriculumSearch()" title="Clear Search">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
 
       <div class="category-pills" id="categoryPills">
-        <button class="pill-btn active" data-cat="all"><i class="fa-solid fa-layer-group"></i> All Modules</button><button class="pill-btn" data-cat="cat-1">Clinical Biochemistry</button><button class="pill-btn" data-cat="cat-2">Immunology Content</button><button class="pill-btn" data-cat="cat-3">Intermediary Metabolism</button><button class="pill-btn" data-cat="cat-4">Enzymology</button><button class="pill-btn" data-cat="cat-5">Cell Biology</button><button class="pill-btn" data-cat="cat-6">Food Safety & Quality Management</button><button class="pill-btn" data-cat="cat-7">Ph.D. Thesis (Bioethanol Production)</button><button class="pill-btn" data-cat="cat-8">Bioanalytical Techniques</button><button class="pill-btn" data-cat="cat-9">Human Physiology</button><button class="pill-btn" data-cat="cat-10">Laboratory Manuals</button><button class="pill-btn" data-cat="cat-11">Home</button>
+        <button class="pill-btn active" onclick="filterCurriculumCategory('all', this)"><i class="fa-solid fa-layer-group"></i> All Modules</button><button class="pill-btn" onclick="filterCurriculumCategory('cat-1', this)">Clinical Biochemistry</button><button class="pill-btn" onclick="filterCurriculumCategory('cat-2', this)">Immunology Content</button><button class="pill-btn" onclick="filterCurriculumCategory('cat-3', this)">Intermediary Metabolism</button><button class="pill-btn" onclick="filterCurriculumCategory('cat-4', this)">Enzymology</button><button class="pill-btn" onclick="filterCurriculumCategory('cat-5', this)">Cell Biology</button><button class="pill-btn" onclick="filterCurriculumCategory('cat-6', this)">Food Safety & Quality Management</button><button class="pill-btn" onclick="filterCurriculumCategory('cat-7', this)">Ph.D. Thesis (Bioethanol Production)</button><button class="pill-btn" onclick="filterCurriculumCategory('cat-8', this)">Bioanalytical Techniques</button><button class="pill-btn" onclick="filterCurriculumCategory('cat-9', this)">Human Physiology</button><button class="pill-btn" onclick="filterCurriculumCategory('cat-10', this)">Laboratory Manuals</button><button class="pill-btn" onclick="filterCurriculumCategory('cat-11', this)">Home</button>
       </div>
     </div>
   </section>
@@ -59,25 +109,25 @@
   <section class="modules-section" style="padding-bottom: 5rem;">
     <div class="container">
       <div class="categories-container" id="categoriesContainer">
-
-      <div class="category-card" data-category="cat-1">
-        <div class="category-header">
-          <div class="category-title-wrap">
-            <div class="category-icon-box">
+        
+      <div class="category-card active" data-category="cat-1" style="margin-bottom: 1.25rem;">
+        <div class="category-header" onclick="toggleCurriculumCard(this)" style="cursor: pointer; padding: 1.25rem 1.75rem; display: flex; align-items: center; justify-content: space-between; user-select: none;">
+          <div class="category-title-wrap" style="display: flex; align-items: center; gap: 1.25rem;">
+            <div class="category-icon-box" style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; flex-shrink: 0;">
               <i class="fa-solid fa-flask-vial"></i>
             </div>
             <div>
-              <h3 class="category-title">Clinical Biochemistry</h3>
-              <div class="category-subtitle">10 Lecture Topics • 14 Documents</div>
+              <h3 class="category-title" style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Clinical Biochemistry</h3>
+              <div class="category-subtitle" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">10 Lecture Topics • 14 Documents</div>
             </div>
           </div>
-          <div class="category-toggle-icon">
+          <div class="category-toggle-icon" style="width: 36px; height: 36px; border-radius: 50%; background: var(--bg-surface-subtle); display: flex; align-items: center; justify-content: center; color: var(--text-muted); transition: transform 0.3s ease; transform: rotate(180deg);">
             <i class="fa-solid fa-chevron-down"></i>
           </div>
         </div>
-        <div class="category-body">
-          <p class="category-description">Comprehensive diagnostics, organ function tests (Liver, Kidney, Gastric), automated biochemistry analyzers, and AC Deb reference materials.</p>
-          <div class="topics-grid">
+        <div class="category-body" style="padding: 1.5rem 1.75rem; border-top: 1px solid var(--border-subtle); background: var(--bg-surface); display: block;">
+          <p class="category-description" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; padding-left: 0.75rem; border-left: 3px solid var(--primary);">Comprehensive diagnostics, organ function tests (Liver, Kidney, Gastric), automated biochemistry analyzers, and AC Deb reference materials.</p>
+          <div class="topics-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
             
           <div class="topic-item-card">
             <div class="topic-header">
@@ -323,24 +373,24 @@
         </div>
       </div>
     
-      <div class="category-card" data-category="cat-2">
-        <div class="category-header">
-          <div class="category-title-wrap">
-            <div class="category-icon-box">
+      <div class="category-card" data-category="cat-2" style="margin-bottom: 1.25rem;">
+        <div class="category-header" onclick="toggleCurriculumCard(this)" style="cursor: pointer; padding: 1.25rem 1.75rem; display: flex; align-items: center; justify-content: space-between; user-select: none;">
+          <div class="category-title-wrap" style="display: flex; align-items: center; gap: 1.25rem;">
+            <div class="category-icon-box" style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; flex-shrink: 0;">
               <i class="fa-solid fa-shield-virus"></i>
             </div>
             <div>
-              <h3 class="category-title">Immunology Content</h3>
-              <div class="category-subtitle">18 Lecture Topics • 12 Documents</div>
+              <h3 class="category-title" style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Immunology Content</h3>
+              <div class="category-subtitle" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">18 Lecture Topics • 12 Documents</div>
             </div>
           </div>
-          <div class="category-toggle-icon">
+          <div class="category-toggle-icon" style="width: 36px; height: 36px; border-radius: 50%; background: var(--bg-surface-subtle); display: flex; align-items: center; justify-content: center; color: var(--text-muted); transition: transform 0.3s ease; transform: rotate(0deg);">
             <i class="fa-solid fa-chevron-down"></i>
           </div>
         </div>
-        <div class="category-body">
-          <p class="category-description">Core concepts of innate & adaptive immunity, antigen-antibody interactions, antibody diversity genetics, MHC, hypersensitivity, vaccines, and hybridoma technology.</p>
-          <div class="topics-grid">
+        <div class="category-body" style="padding: 1.5rem 1.75rem; border-top: 1px solid var(--border-subtle); background: var(--bg-surface); display: none;">
+          <p class="category-description" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; padding-left: 0.75rem; border-left: 3px solid var(--primary);">Core concepts of innate & adaptive immunity, antigen-antibody interactions, antibody diversity genetics, MHC, hypersensitivity, vaccines, and hybridoma technology.</p>
+          <div class="topics-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
             
           <div class="topic-item-card">
             <div class="topic-header">
@@ -646,24 +696,24 @@
         </div>
       </div>
     
-      <div class="category-card" data-category="cat-3">
-        <div class="category-header">
-          <div class="category-title-wrap">
-            <div class="category-icon-box">
+      <div class="category-card" data-category="cat-3" style="margin-bottom: 1.25rem;">
+        <div class="category-header" onclick="toggleCurriculumCard(this)" style="cursor: pointer; padding: 1.25rem 1.75rem; display: flex; align-items: center; justify-content: space-between; user-select: none;">
+          <div class="category-title-wrap" style="display: flex; align-items: center; gap: 1.25rem;">
+            <div class="category-icon-box" style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; flex-shrink: 0;">
               <i class="fa-solid fa-dna"></i>
             </div>
             <div>
-              <h3 class="category-title">Intermediary Metabolism</h3>
-              <div class="category-subtitle">7 Lecture Topics • 3 Documents</div>
+              <h3 class="category-title" style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Intermediary Metabolism</h3>
+              <div class="category-subtitle" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">7 Lecture Topics • 3 Documents</div>
             </div>
           </div>
-          <div class="category-toggle-icon">
+          <div class="category-toggle-icon" style="width: 36px; height: 36px; border-radius: 50%; background: var(--bg-surface-subtle); display: flex; align-items: center; justify-content: center; color: var(--text-muted); transition: transform 0.3s ease; transform: rotate(0deg);">
             <i class="fa-solid fa-chevron-down"></i>
           </div>
         </div>
-        <div class="category-body">
-          <p class="category-description">Detailed biochemical pathways covering amino acid metabolism, vitamins, essential minerals, nutritional biochemistry, and nucleotide dynamics.</p>
-          <div class="topics-grid">
+        <div class="category-body" style="padding: 1.5rem 1.75rem; border-top: 1px solid var(--border-subtle); background: var(--bg-surface); display: none;">
+          <p class="category-description" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; padding-left: 0.75rem; border-left: 3px solid var(--primary);">Detailed biochemical pathways covering amino acid metabolism, vitamins, essential minerals, nutritional biochemistry, and nucleotide dynamics.</p>
+          <div class="topics-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
             
           <div class="topic-item-card">
             <div class="topic-header">
@@ -769,24 +819,24 @@
         </div>
       </div>
     
-      <div class="category-card" data-category="cat-4">
-        <div class="category-header">
-          <div class="category-title-wrap">
-            <div class="category-icon-box">
+      <div class="category-card" data-category="cat-4" style="margin-bottom: 1.25rem;">
+        <div class="category-header" onclick="toggleCurriculumCard(this)" style="cursor: pointer; padding: 1.25rem 1.75rem; display: flex; align-items: center; justify-content: space-between; user-select: none;">
+          <div class="category-title-wrap" style="display: flex; align-items: center; gap: 1.25rem;">
+            <div class="category-icon-box" style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; flex-shrink: 0;">
               <i class="fa-solid fa-atom"></i>
             </div>
             <div>
-              <h3 class="category-title">Enzymology</h3>
-              <div class="category-subtitle">5 Lecture Topics • 2 Documents</div>
+              <h3 class="category-title" style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Enzymology</h3>
+              <div class="category-subtitle" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">5 Lecture Topics • 2 Documents</div>
             </div>
           </div>
-          <div class="category-toggle-icon">
+          <div class="category-toggle-icon" style="width: 36px; height: 36px; border-radius: 50%; background: var(--bg-surface-subtle); display: flex; align-items: center; justify-content: center; color: var(--text-muted); transition: transform 0.3s ease; transform: rotate(0deg);">
             <i class="fa-solid fa-chevron-down"></i>
           </div>
         </div>
-        <div class="category-body">
-          <p class="category-description">Enzyme kinetics, isolation, purification methodologies, industrial immobilization techniques, and foundational principles.</p>
-          <div class="topics-grid">
+        <div class="category-body" style="padding: 1.5rem 1.75rem; border-top: 1px solid var(--border-subtle); background: var(--bg-surface); display: none;">
+          <p class="category-description" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; padding-left: 0.75rem; border-left: 3px solid var(--primary);">Enzyme kinetics, isolation, purification methodologies, industrial immobilization techniques, and foundational principles.</p>
+          <div class="topics-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
             
           <div class="topic-item-card">
             <div class="topic-header">
@@ -862,24 +912,24 @@
         </div>
       </div>
     
-      <div class="category-card" data-category="cat-5">
-        <div class="category-header">
-          <div class="category-title-wrap">
-            <div class="category-icon-box">
+      <div class="category-card" data-category="cat-5" style="margin-bottom: 1.25rem;">
+        <div class="category-header" onclick="toggleCurriculumCard(this)" style="cursor: pointer; padding: 1.25rem 1.75rem; display: flex; align-items: center; justify-content: space-between; user-select: none;">
+          <div class="category-title-wrap" style="display: flex; align-items: center; gap: 1.25rem;">
+            <div class="category-icon-box" style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; flex-shrink: 0;">
               <i class="fa-solid fa-microscope"></i>
             </div>
             <div>
-              <h3 class="category-title">Cell Biology</h3>
-              <div class="category-subtitle">7 Lecture Topics • 6 Documents</div>
+              <h3 class="category-title" style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Cell Biology</h3>
+              <div class="category-subtitle" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">7 Lecture Topics • 6 Documents</div>
             </div>
           </div>
-          <div class="category-toggle-icon">
+          <div class="category-toggle-icon" style="width: 36px; height: 36px; border-radius: 50%; background: var(--bg-surface-subtle); display: flex; align-items: center; justify-content: center; color: var(--text-muted); transition: transform 0.3s ease; transform: rotate(0deg);">
             <i class="fa-solid fa-chevron-down"></i>
           </div>
         </div>
-        <div class="category-body">
-          <p class="category-description">Cellular architecture, cell cycle regulation, signal transduction pathways, cell-cell communication, advanced microscopy, and complete book draft.</p>
-          <div class="topics-grid">
+        <div class="category-body" style="padding: 1.5rem 1.75rem; border-top: 1px solid var(--border-subtle); background: var(--bg-surface); display: none;">
+          <p class="category-description" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; padding-left: 0.75rem; border-left: 3px solid var(--primary);">Cellular architecture, cell cycle regulation, signal transduction pathways, cell-cell communication, advanced microscopy, and complete book draft.</p>
+          <div class="topics-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
             
           <div class="topic-item-card">
             <div class="topic-header">
@@ -1015,24 +1065,24 @@
         </div>
       </div>
     
-      <div class="category-card" data-category="cat-6">
-        <div class="category-header">
-          <div class="category-title-wrap">
-            <div class="category-icon-box">
+      <div class="category-card" data-category="cat-6" style="margin-bottom: 1.25rem;">
+        <div class="category-header" onclick="toggleCurriculumCard(this)" style="cursor: pointer; padding: 1.25rem 1.75rem; display: flex; align-items: center; justify-content: space-between; user-select: none;">
+          <div class="category-title-wrap" style="display: flex; align-items: center; gap: 1.25rem;">
+            <div class="category-icon-box" style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; flex-shrink: 0;">
               <i class="fa-solid fa-wheat-awn"></i>
             </div>
             <div>
-              <h3 class="category-title">Food Safety & Quality Management</h3>
-              <div class="category-subtitle">5 Lecture Topics • 15 Documents</div>
+              <h3 class="category-title" style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Food Safety & Quality Management</h3>
+              <div class="category-subtitle" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">5 Lecture Topics • 15 Documents</div>
             </div>
           </div>
-          <div class="category-toggle-icon">
+          <div class="category-toggle-icon" style="width: 36px; height: 36px; border-radius: 50%; background: var(--bg-surface-subtle); display: flex; align-items: center; justify-content: center; color: var(--text-muted); transition: transform 0.3s ease; transform: rotate(0deg);">
             <i class="fa-solid fa-chevron-down"></i>
           </div>
         </div>
-        <div class="category-body">
-          <p class="category-description">Food safety hazards management, international food standards, adulteration acts (Units I-IV), agri-food dynamics, and quality assurance.</p>
-          <div class="topics-grid">
+        <div class="category-body" style="padding: 1.5rem 1.75rem; border-top: 1px solid var(--border-subtle); background: var(--bg-surface); display: none;">
+          <p class="category-description" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; padding-left: 0.75rem; border-left: 3px solid var(--primary);">Food safety hazards management, international food standards, adulteration acts (Units I-IV), agri-food dynamics, and quality assurance.</p>
+          <div class="topics-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
             
           <div class="topic-item-card">
             <div class="topic-header">
@@ -1238,24 +1288,24 @@
         </div>
       </div>
     
-      <div class="category-card" data-category="cat-7">
-        <div class="category-header">
-          <div class="category-title-wrap">
-            <div class="category-icon-box">
+      <div class="category-card" data-category="cat-7" style="margin-bottom: 1.25rem;">
+        <div class="category-header" onclick="toggleCurriculumCard(this)" style="cursor: pointer; padding: 1.25rem 1.75rem; display: flex; align-items: center; justify-content: space-between; user-select: none;">
+          <div class="category-title-wrap" style="display: flex; align-items: center; gap: 1.25rem;">
+            <div class="category-icon-box" style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; flex-shrink: 0;">
               <i class="fa-solid fa-graduation-cap"></i>
             </div>
             <div>
-              <h3 class="category-title">Ph.D. Thesis (Bioethanol Production)</h3>
-              <div class="category-subtitle">8 Lecture Topics • 7 Documents</div>
+              <h3 class="category-title" style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Ph.D. Thesis (Bioethanol Production)</h3>
+              <div class="category-subtitle" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">8 Lecture Topics • 7 Documents</div>
             </div>
           </div>
-          <div class="category-toggle-icon">
+          <div class="category-toggle-icon" style="width: 36px; height: 36px; border-radius: 50%; background: var(--bg-surface-subtle); display: flex; align-items: center; justify-content: center; color: var(--text-muted); transition: transform 0.3s ease; transform: rotate(0deg);">
             <i class="fa-solid fa-chevron-down"></i>
           </div>
         </div>
-        <div class="category-body">
-          <p class="category-description">Original Ph.D. dissertation on the optimization and bioethanol production by Dr. Anupama: complete chapters from Literature Review to Results & References.</p>
-          <div class="topics-grid">
+        <div class="category-body" style="padding: 1.5rem 1.75rem; border-top: 1px solid var(--border-subtle); background: var(--bg-surface); display: none;">
+          <p class="category-description" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; padding-left: 0.75rem; border-left: 3px solid var(--primary);">Original Ph.D. dissertation on the optimization and bioethanol production by Dr. Anupama: complete chapters from Literature Review to Results & References.</p>
+          <div class="topics-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
             
           <div class="topic-item-card">
             <div class="topic-header">
@@ -1411,24 +1461,24 @@
         </div>
       </div>
     
-      <div class="category-card" data-category="cat-8">
-        <div class="category-header">
-          <div class="category-title-wrap">
-            <div class="category-icon-box">
+      <div class="category-card" data-category="cat-8" style="margin-bottom: 1.25rem;">
+        <div class="category-header" onclick="toggleCurriculumCard(this)" style="cursor: pointer; padding: 1.25rem 1.75rem; display: flex; align-items: center; justify-content: space-between; user-select: none;">
+          <div class="category-title-wrap" style="display: flex; align-items: center; gap: 1.25rem;">
+            <div class="category-icon-box" style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; flex-shrink: 0;">
               <i class="fa-solid fa-book-medical"></i>
             </div>
             <div>
-              <h3 class="category-title">Bioanalytical Techniques</h3>
-              <div class="category-subtitle">1 Lecture Topics • 1 Documents</div>
+              <h3 class="category-title" style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Bioanalytical Techniques</h3>
+              <div class="category-subtitle" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">1 Lecture Topics • 1 Documents</div>
             </div>
           </div>
-          <div class="category-toggle-icon">
+          <div class="category-toggle-icon" style="width: 36px; height: 36px; border-radius: 50%; background: var(--bg-surface-subtle); display: flex; align-items: center; justify-content: center; color: var(--text-muted); transition: transform 0.3s ease; transform: rotate(0deg);">
             <i class="fa-solid fa-chevron-down"></i>
           </div>
         </div>
-        <div class="category-body">
-          <p class="category-description">Complete reference text on bioanalytical instrumentation, chromatography, electrophoresis, spectroscopy, and analytical techniques.</p>
-          <div class="topics-grid">
+        <div class="category-body" style="padding: 1.5rem 1.75rem; border-top: 1px solid var(--border-subtle); background: var(--bg-surface); display: none;">
+          <p class="category-description" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; padding-left: 0.75rem; border-left: 3px solid var(--primary);">Complete reference text on bioanalytical instrumentation, chromatography, electrophoresis, spectroscopy, and analytical techniques.</p>
+          <div class="topics-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
             
           <div class="topic-item-card">
             <div class="topic-header">
@@ -1454,24 +1504,24 @@
         </div>
       </div>
     
-      <div class="category-card" data-category="cat-9">
-        <div class="category-header">
-          <div class="category-title-wrap">
-            <div class="category-icon-box">
+      <div class="category-card" data-category="cat-9" style="margin-bottom: 1.25rem;">
+        <div class="category-header" onclick="toggleCurriculumCard(this)" style="cursor: pointer; padding: 1.25rem 1.75rem; display: flex; align-items: center; justify-content: space-between; user-select: none;">
+          <div class="category-title-wrap" style="display: flex; align-items: center; gap: 1.25rem;">
+            <div class="category-icon-box" style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; flex-shrink: 0;">
               <i class="fa-solid fa-heart-pulse"></i>
             </div>
             <div>
-              <h3 class="category-title">Human Physiology</h3>
-              <div class="category-subtitle">4 Lecture Topics • 3 Documents</div>
+              <h3 class="category-title" style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Human Physiology</h3>
+              <div class="category-subtitle" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">4 Lecture Topics • 3 Documents</div>
             </div>
           </div>
-          <div class="category-toggle-icon">
+          <div class="category-toggle-icon" style="width: 36px; height: 36px; border-radius: 50%; background: var(--bg-surface-subtle); display: flex; align-items: center; justify-content: center; color: var(--text-muted); transition: transform 0.3s ease; transform: rotate(0deg);">
             <i class="fa-solid fa-chevron-down"></i>
           </div>
         </div>
-        <div class="category-body">
-          <p class="category-description">Detailed physiological systems including cardiovascular dynamics, lymphatic circulation, and respiratory mechanics.</p>
-          <div class="topics-grid">
+        <div class="category-body" style="padding: 1.5rem 1.75rem; border-top: 1px solid var(--border-subtle); background: var(--bg-surface); display: none;">
+          <p class="category-description" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; padding-left: 0.75rem; border-left: 3px solid var(--primary);">Detailed physiological systems including cardiovascular dynamics, lymphatic circulation, and respiratory mechanics.</p>
+          <div class="topics-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
             
           <div class="topic-item-card">
             <div class="topic-header">
@@ -1547,24 +1597,24 @@
         </div>
       </div>
     
-      <div class="category-card" data-category="cat-10">
-        <div class="category-header">
-          <div class="category-title-wrap">
-            <div class="category-icon-box">
+      <div class="category-card" data-category="cat-10" style="margin-bottom: 1.25rem;">
+        <div class="category-header" onclick="toggleCurriculumCard(this)" style="cursor: pointer; padding: 1.25rem 1.75rem; display: flex; align-items: center; justify-content: space-between; user-select: none;">
+          <div class="category-title-wrap" style="display: flex; align-items: center; gap: 1.25rem;">
+            <div class="category-icon-box" style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; flex-shrink: 0;">
               <i class="fa-solid fa-vial-circle-check"></i>
             </div>
             <div>
-              <h3 class="category-title">Laboratory Manuals</h3>
-              <div class="category-subtitle">2 Lecture Topics • 1 Documents</div>
+              <h3 class="category-title" style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Laboratory Manuals</h3>
+              <div class="category-subtitle" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">2 Lecture Topics • 1 Documents</div>
             </div>
           </div>
-          <div class="category-toggle-icon">
+          <div class="category-toggle-icon" style="width: 36px; height: 36px; border-radius: 50%; background: var(--bg-surface-subtle); display: flex; align-items: center; justify-content: center; color: var(--text-muted); transition: transform 0.3s ease; transform: rotate(0deg);">
             <i class="fa-solid fa-chevron-down"></i>
           </div>
         </div>
-        <div class="category-body">
-          <p class="category-description">Practical protocols, standard operating procedures, and Downstream Processing laboratory manual for undergraduate & postgraduate curricula.</p>
-          <div class="topics-grid">
+        <div class="category-body" style="padding: 1.5rem 1.75rem; border-top: 1px solid var(--border-subtle); background: var(--bg-surface); display: none;">
+          <p class="category-description" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; padding-left: 0.75rem; border-left: 3px solid var(--primary);">Practical protocols, standard operating procedures, and Downstream Processing laboratory manual for undergraduate & postgraduate curricula.</p>
+          <div class="topics-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
             
           <div class="topic-item-card">
             <div class="topic-header">
@@ -1600,24 +1650,24 @@
         </div>
       </div>
     
-      <div class="category-card" data-category="cat-11">
-        <div class="category-header">
-          <div class="category-title-wrap">
-            <div class="category-icon-box">
+      <div class="category-card" data-category="cat-11" style="margin-bottom: 1.25rem;">
+        <div class="category-header" onclick="toggleCurriculumCard(this)" style="cursor: pointer; padding: 1.25rem 1.75rem; display: flex; align-items: center; justify-content: space-between; user-select: none;">
+          <div class="category-title-wrap" style="display: flex; align-items: center; gap: 1.25rem;">
+            <div class="category-icon-box" style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; flex-shrink: 0;">
               <i class="fa-solid fa-leaf"></i>
             </div>
             <div>
-              <h3 class="category-title">Home</h3>
-              <div class="category-subtitle">2 Lecture Topics • 0 Documents</div>
+              <h3 class="category-title" style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Home</h3>
+              <div class="category-subtitle" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">2 Lecture Topics • 0 Documents</div>
             </div>
           </div>
-          <div class="category-toggle-icon">
+          <div class="category-toggle-icon" style="width: 36px; height: 36px; border-radius: 50%; background: var(--bg-surface-subtle); display: flex; align-items: center; justify-content: center; color: var(--text-muted); transition: transform 0.3s ease; transform: rotate(0deg);">
             <i class="fa-solid fa-chevron-down"></i>
           </div>
         </div>
-        <div class="category-body">
-          <p class="category-description">Foundational environmental studies, biodiversity, natural resources conservation, and general course introductions.</p>
-          <div class="topics-grid">
+        <div class="category-body" style="padding: 1.5rem 1.75rem; border-top: 1px solid var(--border-subtle); background: var(--bg-surface); display: none;">
+          <p class="category-description" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; padding-left: 0.75rem; border-left: 3px solid var(--primary);">Foundational environmental studies, biodiversity, natural resources conservation, and general course introductions.</p>
+          <div class="topics-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
             
           <div class="topic-item-card">
             <div class="topic-header">
@@ -1643,11 +1693,10 @@
         </div>
       </div>
     
-</div>
-</div>
-</section>
+      </div>
+    </div>
+  </section>
 
-  
   <footer class="footer">
     <div class="container">
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle);">
@@ -1666,7 +1715,108 @@
     </div>
   </footer>
 
+  <!-- Self-Contained Bulletproof Accordion & Filter Logic -->
+  <script>
+    // Theme initialization
+    (function() {
+      const saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', saved);
+      const icon = document.querySelector('#themeToggle i');
+      if (icon) icon.className = saved === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+      
+      const toggle = document.getElementById('themeToggle');
+      if (toggle) {
+        toggle.onclick = function() {
+          const curr = document.documentElement.getAttribute('data-theme');
+          const next = curr === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+          if (icon) icon.className = next === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        };
+      }
+    })();
 
-  <script src="app.js"></script>
+    // 100% Direct Toggle (Independent of any external CSS / JS dependencies)
+    function toggleCurriculumCard(header) {
+      const card = header.closest('.category-card');
+      if (!card) return;
+      const body = card.querySelector('.category-body');
+      const icon = card.querySelector('.category-toggle-icon');
+      
+      const isCurrentlyOpen = (body && body.style.display !== 'none');
+      
+      if (isCurrentlyOpen) {
+        card.classList.remove('active');
+        if (body) body.style.display = 'none';
+        if (icon) {
+          icon.style.transform = 'rotate(0deg)';
+          icon.style.background = 'var(--bg-surface-subtle)';
+          icon.style.color = 'var(--text-muted)';
+        }
+      } else {
+        card.classList.add('active');
+        if (body) body.style.display = 'block';
+        if (icon) {
+          icon.style.transform = 'rotate(180deg)';
+          icon.style.background = 'var(--primary-light)';
+          icon.style.color = 'var(--primary)';
+        }
+      }
+    }
+
+    // Category Filter Pills
+    function filterCurriculumCategory(catId, btn) {
+      document.querySelectorAll('#categoryPills .pill-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      
+      document.querySelectorAll('.category-card').forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        const matches = (catId === 'all' || cardCat === catId);
+        
+        if (matches) {
+          card.style.display = 'block';
+          if (catId !== 'all') {
+            card.classList.add('active');
+            const body = card.querySelector('.category-body');
+            if (body) body.style.display = 'block';
+            const icon = card.querySelector('.category-toggle-icon');
+            if (icon) {
+              icon.style.transform = 'rotate(180deg)';
+              icon.style.background = 'var(--primary-light)';
+              icon.style.color = 'var(--primary)';
+            }
+          }
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Live Search
+    function searchCurriculum(val) {
+      const q = val.toLowerCase().trim();
+      document.querySelectorAll('.category-card').forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (!q || text.includes(q)) {
+          card.style.display = 'block';
+          if (q) {
+            card.classList.add('active');
+            const body = card.querySelector('.category-body');
+            if (body) body.style.display = 'block';
+          }
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function clearCurriculumSearch() {
+      const input = document.getElementById('searchInput');
+      if (input) {
+        input.value = '';
+        searchCurriculum('');
+      }
+    }
+  </script>
 </body>
 </html>
